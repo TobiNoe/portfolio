@@ -7,15 +7,31 @@
     justify-content: center;
     padding-left: 100px;
     padding-right: 100px;
-    
 }
 
-.hero-mail-scroll{
+.hero-name{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    >h5{
+        color:#00BC8F;
+    }
+}
+
+.hero-mail-scroll {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    &div {
+    >p {
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+    }
+
+    >div {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
