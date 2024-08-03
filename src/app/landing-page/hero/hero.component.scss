@@ -9,7 +9,17 @@
     padding-right: 100px;
 }
 
+.hero-headline{
+    display: flex;
+    flex-direction: column;
+
+    >h1{
+        text-align: center;
+    }
+}
+
 .hero-name{
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 8px;
