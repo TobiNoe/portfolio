@@ -1,0 +1,21 @@
+.footer {
+    background: #000000;
+    color: #FFFCF3;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        padding-bottom: 40px;
+    }
+
+    h4 {
+        color: #00BC8F;
+        padding: 18px 0;
+    }
+}
