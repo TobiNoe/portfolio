@@ -5,11 +5,38 @@
         <p>Say hello! let's discuss your ideas and make it happen</p>
         <form action="">
             <div class="input-label">
-                <input class="input-name" type="text" placeholder="" id="input_text">
-                <label class="lable-name" for="input_text">Your Name</label> 
+                <input type="text" placeholder="" id="input_name" required>
+                <label for="input_name">Your name</label>
             </div>
-            <input type="email" name="" id="" placeholder="Your email" required>
-            <textarea name="" id="" placeholder="Your message" required></textarea>
+            <div class="input-label">
+                <input type="email" name="" id="input_mail" required>
+                <label for="input_mail">Your email</label>
+            </div>
+            <div class="textarea-label">
+                <textarea name="" id="input_message" required></textarea>
+                <label for="input_message">Your message</label>
+            </div>
+            <div class="checkbox-policy">
+                <div>
+                    <input class="d-none" type="checkbox" name="" id="checkbox_policy" required>
+                    <label for="checkbox_policy">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_41976_3966" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="24" height="24">
+                                <rect width="24" height="24" fill="#797EF3" />
+                            </mask>
+                            <g mask="url(#mask0_41976_3966)">
+                                <path
+                                    d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H5ZM5 19H19V5H5V19Z"
+                                    fill="#FFFCF3" />
+                            </g>
+                        </svg>
+                    </label>
+                </div>
+
+                <p>I've read the <a href="http://" target="_blank" rel="noopener noreferrer">privacy policy</a> and
+                    agree to the processing of my data as outlined.</p>
+            </div>
             <input type="submit" value="" placeholder="Send message">
         </form>
     </div>
