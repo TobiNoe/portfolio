@@ -3,22 +3,26 @@
     <div>
         <h4>Want to discuss a new project?</h4>
         <p>Say hello! let's discuss your ideas and make it happen</p>
-        <form action="">
+        <form (submit)="onSubmit(contactForm)" #contactForm="ngForm">
+
             <div class="input-label">
-                <input type="text" placeholder="" id="input_name" required>
+                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="" id="input_name" required>
                 <label for="input_name">Your name</label>
             </div>
+
             <div class="input-label">
-                <input type="email" name="" id="input_mail" required>
+                <input [(ngModel)]="contactData.email" type="email" name="email" id="input_mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <label for="input_mail">Your email</label>
             </div>
+
             <div class="textarea-label">
-                <textarea name="" id="input_message" required></textarea>
+                <textarea [(ngModel)]="contactData.message" minlength="4" name="message" id="input_message" required></textarea>
                 <label for="input_message">Your message</label>
             </div>
+
             <div class="checkbox-policy">
                 <div>
-                    <input (click)="checkPolicy()" class="d-none" type="checkbox" name="checkbox" id="checkbox_policy">
+                    <input (click)="checkPolicy()" class="d-none" type="checkbox" name="checkbox" id="checkbox_policy" required>
                     <label for="checkbox_policy">
                         @if (!policyChecked) {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +55,13 @@
                 <p>I've read the <a href="http://" target="_blank" rel="noopener noreferrer">privacy policy</a> and
                     agree to the processing of my data as outlined.</p>
             </div>
-            <input class="btn-submit" type="submit" value="Send message" [disabled]="btnDisabled">
+
+            @if (contactForm.valid && policyChecked) {
+                <input  class="btn-submit" type="submit" value="Send message">  
+            } @else {
+                <input  class="btn-no-submit" type="submit" value="Send message">
+            }
+
         </form>
     </div>
 </section>
