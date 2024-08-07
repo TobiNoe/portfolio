@@ -119,14 +119,48 @@ form {
         width: 100%;
 
         >div {
-            label {
-                display: flex;
-                align-items: center;
+            >label {
+
+                >svg {
+                    margin-right: 4px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
         >p {
             font-size: 14px;
+
+            >a {
+                color: #00BC8F;
+                text-decoration: none;
+
+                &:hover {
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+            }
         }
+
+        &:hover {
+            svg {
+                background-color: #00BC8F;
+                border-radius: 50%;
+            }
+
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btn-submit {
+        color: #BBBBBB;
+        font-size: 20px;
+        border: 4px solid #BBBBBB;
+        padding: 20px 60px 20px 60px;
     }
 }
