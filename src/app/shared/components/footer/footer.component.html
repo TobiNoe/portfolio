@@ -5,24 +5,37 @@
         <p>Say hello! let's discuss your ideas and make it happen</p>
         <form (submit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-            <div class="input-label">
-                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="" id="input_name" required>
+            <div class="input-label" [ngClass]="contactData.name == '' ? 'input-label-empty' : 'input-label-filled'">
+                <input [(ngModel)]="contactData.name" #name="ngModel"
+                    [ngClass]="name.invalid && name.touched ? 'border-invalid' : ''"
+                    [ngClass]="name.valid ? 'border-valid' : ''" name="name" type="text"
+                    placeholder="" id="input_name" minlength="4" required>
                 <label for="input_name">Your name</label>
+                @if(name.valid){
+                <img class="icon-validation" src="./assets/img/footer/valid.svg" alt="">
+                }
+                @if(name.invalid && name.touched){
+                <img class="icon-validation" src="./assets/img/footer/invalid.svg" alt="">
+                <span class="validation-text">Your email is required</span>
+                }
             </div>
 
-            <div class="input-label">
-                <input [(ngModel)]="contactData.email" type="email" name="email" id="input_mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <div class="input-label" [ngClass]="contactData.email == '' ? 'input-label-empty' : 'input-label-filled'">
+                <input [(ngModel)]="contactData.email" type="email" name="email" id="input_mail" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <label for="input_mail">Your email</label>
             </div>
 
             <div class="textarea-label">
-                <textarea [(ngModel)]="contactData.message" minlength="4" name="message" id="input_message" required></textarea>
+                <textarea [(ngModel)]="contactData.message" minlength="4" name="message" id="input_message"
+                    required></textarea>
                 <label for="input_message">Your message</label>
             </div>
 
             <div class="checkbox-policy">
                 <div>
-                    <input (click)="checkPolicy()" class="d-none" type="checkbox" name="checkbox" id="checkbox_policy" required>
+                    <input (click)="checkPolicy()" class="d-none" type="checkbox" name="checkbox" id="checkbox_policy"
+                        required>
                     <label for="checkbox_policy">
                         @if (!policyChecked) {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,9 +70,9 @@
             </div>
 
             @if (contactForm.valid && policyChecked) {
-                <input  class="btn-submit" type="submit" value="Send message">  
+            <input class="btn-submit" type="submit" value="Send message">
             } @else {
-                <input  class="btn-no-submit" type="submit" value="Send message">
+            <input class="btn-no-submit" type="submit" value="Send message">
             }
 
         </form>

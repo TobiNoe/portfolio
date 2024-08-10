@@ -28,6 +28,11 @@
     }
 }
 
+input, textarea{
+    border: none;
+    border-bottom: 2px solid #FFFCF3;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -40,7 +45,6 @@ form {
         font-size: 16px;
         font-family: 'Overpass';
         font-weight: 400;
-        border: none;
         box-sizing: border-box;
 
         &:focus-visible {
@@ -49,24 +53,33 @@ form {
 
     }
 
-
     .input-label {
         position: relative;
 
         >input {
+            margin-bottom: 10px;
             height: 50px;
             width: 100%;
-            border-bottom: 2px solid #FFFCF3;
+            
             padding: 15px 25px 15px 25px;
-
-
 
             &:hover {
                 border: 4px solid #FFFCF3;
             }
+        }
+
+        >img {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+        }
+    }
+
+    .input-label-empty {
+
+        >input {
 
             &:focus {
-                border: 2px solid #FFFCF3;
 
                 +label {
                     top: -10px;
@@ -79,8 +92,18 @@ form {
             position: absolute;
             top: 15px;
             left: 25px;
-
         }
+    }
+
+    .input-label-filled {
+
+        >label {
+            position: absolute;
+            top: -10px;
+            left: 25px;
+            padding: 0 4px;
+        }
+
     }
 
     .textarea-label {
@@ -111,6 +134,22 @@ form {
             top: 15px;
             left: 25px;
         }
+    }
+
+    .validation-text{
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: 'Overpass';
+        font-weight: 400;
+        color: #E61C40;
+    }
+
+    .border-valid {
+        border: 2px solid #FFFCF3;
+    }
+
+    .border-invalid {
+        border: 4px solid #FFFCF3;
     }
 
     .checkbox-policy {
