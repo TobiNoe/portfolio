@@ -8,28 +8,47 @@
             <div class="input-label" [ngClass]="contactData.name == '' ? 'input-label-empty' : 'input-label-filled'">
                 <input [(ngModel)]="contactData.name" #name="ngModel"
                     [ngClass]="name.invalid && name.touched ? 'border-invalid' : ''"
-                    [ngClass]="name.valid ? 'border-valid' : ''" name="name" type="text"
-                    placeholder="" id="input_name" minlength="4" required>
+                    [ngClass]="name.valid ? 'border-valid' : ''" name="name" type="text" placeholder="" id="input_name"
+                    minlength="4" autocomplete="off" required>
                 <label for="input_name">Your name</label>
                 @if(name.valid){
                 <img class="icon-validation" src="./assets/img/footer/valid.svg" alt="">
                 }
                 @if(name.invalid && name.touched){
-                <img class="icon-validation" src="./assets/img/footer/invalid.svg" alt="">
-                <span class="validation-text">Your email is required</span>
+                <img src="./assets/img/footer/invalid.svg" alt="">
+                <span class="validation-text">Your name is required</span>
                 }
             </div>
 
             <div class="input-label" [ngClass]="contactData.email == '' ? 'input-label-empty' : 'input-label-filled'">
-                <input [(ngModel)]="contactData.email" type="email" name="email" id="input_mail" required
+                <input [(ngModel)]="contactData.email" #email="ngModel"
+                    [ngClass]="email.invalid && email.touched ? 'border-invalid' : ''"
+                    [ngClass]="email.valid ? 'border-valid' : ''" type="email" name="email" id="input_mail" required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <label for="input_mail">Your email</label>
+                @if(email.valid){
+                <img class="icon-validation" src="./assets/img/footer/valid.svg" alt="">
+                }
+                @if(email.invalid && email.touched){
+                <img src="./assets/img/footer/invalid.svg" alt="">
+                <span class="validation-text">Your email is required</span>
+                }
             </div>
 
-            <div class="textarea-label">
-                <textarea [(ngModel)]="contactData.message" minlength="4" name="message" id="input_message"
+            <div class="textarea-label"
+                [ngClass]="contactData.message == '' ? 'textarea-label-empty' : 'textarea-label-filled'">
+                <textarea [(ngModel)]="contactData.message" #message="ngModel"
+                    [ngClass]="message.invalid && message.touched ? 'border-invalid' : ''"
+                    [ngClass]="message.valid ? 'border-valid' : ''" minlength="4" name="message" id="input_message"
                     required></textarea>
                 <label for="input_message">Your message</label>
+                @if(message.valid){
+                <img class="icon-validation" src="./assets/img/footer/valid.svg" alt="">
+                }
+                @if(message.invalid && message.touched){
+                <img  src="./assets/img/footer/invalid.svg" alt="">
+                <span class="validation-text">Your message is empty</span>
+                }
             </div>
 
             <div class="checkbox-policy">
@@ -68,6 +87,7 @@
                 <p>I've read the <a href="http://" target="_blank" rel="noopener noreferrer">privacy policy</a> and
                     agree to the processing of my data as outlined.</p>
             </div>
+            <span class="validation-text validation-policy">Please accept the privacy policy.</span>
 
             @if (contactForm.valid && policyChecked) {
             <input class="btn-submit" type="submit" value="Send message">
