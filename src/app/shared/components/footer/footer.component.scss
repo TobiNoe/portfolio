@@ -1,17 +1,13 @@
+@import './../../../../styles.scss';
+
 .footer {
     background: #000000;
     color: #FFFCF3;
     padding-left: 100px;
     padding-right: 100px;
 
-    >div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        >p {
-            padding-bottom: 22px;
-        }
+    .form-div {
+        @include dFlex($direction: column, $ai: center);
     }
 
     h2 {
@@ -35,8 +31,7 @@ input, textarea{
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    @include dFlex($direction: column);
     width: 50%;
     gap: 20px;
 
@@ -182,8 +177,7 @@ form {
     }
 
     .checkbox-policy {
-        display: flex;
-        align-items: center;
+        @include dFlex($ai: center);
         width: 100%;
 
         >div {
@@ -237,5 +231,35 @@ form {
         font-size: 20px;
         border: 4px solid #FFFCF3;
         padding: 20px 60px 20px 60px;
+    }
+}
+
+.top-navigation{
+    position: fixed;
+    right: 25px;
+    bottom: 60px;
+}
+
+.info {
+    @include dFlex();
+    margin-top: 34px;
+}
+
+.legal-notice{
+    @include dFlex($ai: center, $jc: flex-end);
+    padding-bottom: 13px;
+
+    a {
+        text-decoration: none;
+        color: #FFFCF3;
+        cursor: pointer;
+    }
+    
+    p{
+        font-size: 16px;
+
+        &:hover {
+            font-weight: bold;
+        }
     }
 }

@@ -88,3 +88,10 @@ p {
         url('./../public/assets/fonts/overpass-v13-latin-700.ttf') format('truetype');
     /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
+
+@mixin dFlex($direction: row, $jc: normal, $ai: normal) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
+}
