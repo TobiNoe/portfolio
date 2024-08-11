@@ -241,8 +241,14 @@ form {
 }
 
 .info {
-    @include dFlex();
+    @include dFlex($ai: center, $jc: space-between);
     margin-top: 34px;
+}
+
+.links{
+    @include dFlex($jc: space-between);
+    width: 204px;
+    gap: 20px;
 }
 
 .legal-notice{
