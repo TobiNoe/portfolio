@@ -46,7 +46,7 @@
                 <img class="icon-validation" src="./assets/img/footer/valid.svg" alt="">
                 }
                 @if(message.invalid && message.touched){
-                <img  src="./assets/img/footer/invalid.svg" alt="">
+                <img src="./assets/img/footer/invalid.svg" alt="">
                 <span class="validation-text">Your message is empty</span>
                 }
             </div>
@@ -89,11 +89,13 @@
             </div>
             <span class="validation-text validation-policy">Please accept the privacy policy.</span>
 
-            @if (contactForm.valid && policyChecked) {
-            <input class="btn-submit" type="submit" value="Send message">
-            } @else {
-            <input class="btn-no-submit" type="submit" value="Send message">
-            }
+            <div class="btn-center">
+                @if (contactForm.valid && policyChecked) {
+                <input class="btn-submit btn" type="submit" value="Send message">
+                } @else {
+                <input class="btn-no-submit btn" type="submit" value="Send message">
+                }
+            </div>
 
         </form>
     </div>
@@ -103,12 +105,16 @@
     <div class="info">
         <p> © Tobias Nölle 2024</p>
         <div class="links">
-            <a href=""><img src="./assets/img/footer/github_button.svg" alt="Github link"></a>
-            <a href=""><img src="./assets/img/footer/email_button.svg" alt="Mail link"></a>
-            <a href=""><img src="./assets/img/footer/linkedin_button.svg" alt="Linkedin link"></a>
+            <a href="https://github.com/TobiNoe" target="_blank" rel="noopener noreferrer"><img
+                    src="./assets/img/footer/github_button.svg" alt="Github link"></a>
+            <a href="mailto:tobias_noelle@gmx.de"><img src="./assets/img/footer/email_button.svg" alt="Mail link"></a>
+            <a href="https://de.linkedin.com/in/tobias-nölle-17223728a" target="_blank"><img
+                    src="./assets/img/footer/linkedin_button.svg" alt="Linkedin link"></a>
         </div>
     </div>
     <div class="legal-notice">
-        <a href="http://" target="_blank" rel="noopener noreferrer"><p>Legal notice</p></a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+            <p>Legal notice</p>
+        </a>
     </div>
 </section>

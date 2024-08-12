@@ -219,18 +219,24 @@ form {
         }
     }
 
+    .btn-center {
+        @include dFlex($jc: center)
+    }
+
+    .btn {
+        font-size: 20px;
+        padding: 20px 60px 20px 60px;
+        width: 50%;
+    }
+
     .btn-no-submit {
         color: #BBBBBB;
-        font-size: 20px;
         border: 4px solid #BBBBBB;
-        padding: 20px 60px 20px 60px;
     }
 
     .btn-submit {
         color: #FFFCF3;
-        font-size: 20px;
-        border: 4px solid #FFFCF3;
-        padding: 20px 60px 20px 60px;
+        border: 4px solid #FFFCF3; 
     }
 }
 
@@ -243,6 +249,7 @@ form {
 .info {
     @include dFlex($ai: center, $jc: space-between);
     margin-top: 34px;
+    height: 69px;
 }
 
 .links{
