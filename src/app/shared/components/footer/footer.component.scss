@@ -1,8 +1,8 @@
 @import './../../../../styles.scss';
 
 .footer {
-    background: #000000;
-    color: #FFFCF3;
+    background: $bc-secondery;
+    color: $text-primary;
     padding-left: 100px;
     padding-right: 100px;
 
@@ -12,10 +12,15 @@
 
     h2 {
         padding-bottom: 40px;
+        width: 426px;
+
+        &:hover{
+            color: $text-secondery;
+        }
     }
 
     h4 {
-        color: #00BC8F;
+        color: $text-secondery;
         padding: 18px 0;
     }
 
@@ -26,7 +31,7 @@
 
 input, textarea{
     border: none;
-    border-bottom: 2px solid #FFFCF3;
+    border-bottom: 2px solid $text-primary;
     padding: 15px 55px 15px 25px;
 }
 
@@ -36,8 +41,8 @@ form {
     gap: 20px;
 
     * {
-        background: #000000;
-        color: #FFFCF3;
+        background: $bc-secondery;
+        color: $text-primary;
         font-size: 16px;
         font-family: 'Overpass';
         font-weight: 400;
@@ -60,7 +65,7 @@ form {
            /*  padding: 15px 25px 15px 25px; */
 
             &:hover {
-                border: 4px solid #FFFCF3;
+                border: 4px solid $text-primary;
             }
         }
 
@@ -112,7 +117,7 @@ form {
             /* padding: 15px 25px 15px 25px; */
 
             &:hover {
-                border: 4px solid #FFFCF3;
+                border: 4px solid $text-primary;
             }
         }
 
@@ -133,7 +138,7 @@ form {
         >textarea {
 
             &:focus {
-                border: 2px solid #FFFCF3;
+                border: 2px solid $text-primary;
 
                 +label {
                     top: -10px;
@@ -160,7 +165,7 @@ form {
         font-size: 16px;
         font-family: 'Overpass';
         font-weight: 400;
-        color: #E61C40;
+        color: $text-form-warning;
     }
 
     .validation-policy{
@@ -169,11 +174,11 @@ form {
     }
 
     .border-valid {
-        border: 2px solid #FFFCF3;
+        border: 2px solid $text-primary;
     }
 
     .border-invalid {
-        border: 4px solid #FFFCF3;
+        border: 4px solid $text-primary;
     }
 
     .checkbox-policy {
@@ -197,7 +202,7 @@ form {
             font-size: 14px;
 
             >a {
-                color: #00BC8F;
+                color: $text-secondery;
                 text-decoration: none;
 
                 &:hover {
@@ -209,7 +214,7 @@ form {
 
         &:hover {
             svg {
-                background-color: #00BC8F;
+                background-color: $text-secondery;
                 border-radius: 50%;
             }
 
@@ -227,16 +232,17 @@ form {
         font-size: 20px;
         padding: 20px 60px 20px 60px;
         width: 50%;
+        max-width: 269px;
     }
 
     .btn-no-submit {
-        color: #BBBBBB;
-        border: 4px solid #BBBBBB;
+        color: $text-inactive;
+        border: 4px solid $text-inactive;
     }
 
     .btn-submit {
-        color: #FFFCF3;
-        border: 4px solid #FFFCF3; 
+        color: $text-primary;
+        border: 4px solid $text-primary; 
     }
 }
 
@@ -264,7 +270,7 @@ form {
 
     a {
         text-decoration: none;
-        color: #FFFCF3;
+        color: $text-primary;
         cursor: pointer;
     }
     
