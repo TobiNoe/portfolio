@@ -5,14 +5,18 @@
             life. Creativity and logical thinking are skills that I have developed to connect ideas into quality
             products.
             <br><br>
-            If you think I’d be a good match for your projects, contact me!</p>
+            If you think I’d be a good match for your projects, contact me!
+        </p>
         <div>
             <p><img src="./assets/img/aboutMe/house.svg" alt="house img"> Based in Dortmund</p>
             <p><img src="./assets/img/aboutMe/laptop.svg" alt="laptop img"> Open to work hybrid</p>
         </div>
     </div>
     <div class="about-me-img">
-        <img src="./assets/img/aboutMe/portrait_placeholder.png" alt="">
+        <img (mouseenter)="toggleHover()" (mouseleave)="toggleHover()" src="./assets/img/aboutMe/portrait_placeholder.png" alt="">
+        <div class="about-me-outline"(mouseenter)="toggleHover()" (mouseleave)="toggleHover()"
+            [class]="isHover ? 'about-me-outline-color' : ''">
+        </div>
     </div>
 
 </div>

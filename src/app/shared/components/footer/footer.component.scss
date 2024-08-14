@@ -26,6 +26,7 @@
 
         &:hover {
             color: $text-secondery;
+            transition: color 50ms linear;
         }
     }
 

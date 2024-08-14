@@ -1,37 +1,58 @@
 @import './../../../styles.scss';
 
-.about-me{
+.about-me {
     @include dFlex();
     padding: 0 100px;
-    width: 100%;
-    max-width: 1259px;
+    /* width: 100%; */
+    /* max-width: 1259px; */
     height: 681px;
     background: $bc-primary;
 }
 
-.about-me-info{
+.about-me-info {
     width: 50%;
     @include dFlex($direction: column);
     gap: 48px;
 
-    > div{
+    >h2 {
+        &:hover {
+            color: $text-secondery;
+            transition: color 50ms linear;
+        }
+    }
+
+    >div {
         @include dFlex($jc: center, $direction: column);
         gap: 16px;
 
-        > p{
+        >p {
             @include dFlex($ai: center);
             gap: 8px;
         }
     }
 }
 
-.about-me-img{
+.about-me-img {
+    position: relative;
     width: 50%;
-    @include dFlex($jc:flex-end, $ai:flex-end);
+    @include dFlex($jc: flex-end, $ai: flex-end);
 
-    > img{
+    >img {
         width: 533px;
         height: 533px;
         padding: 0 20px 20px 0;
+    }
+
+    .about-me-outline {
+        display: block;
+        position: absolute;
+        width: 533px;
+        height: 533px;
+        outline: 4px solid transparent;
+    }
+
+    .about-me-outline-color {
+        outline-color: $border-black;
+        transition: outline-color 50ms linear;
     }
 }

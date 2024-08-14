@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
+  isHover: boolean = false;
 
+  toggleHover() {
+    this.isHover = !this.isHover;
+  }
 }
