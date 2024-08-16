@@ -32,6 +32,23 @@
     }
 }
 
+.about-me-button {
+    align-items: center!important;
+
+    >input {
+        font: 400 23px 'Overpass';
+        padding: 20px 60px;
+        border: solid 4px $border-black;
+        background: transparent;
+
+        &:hover {
+            cursor: pointer;
+            padding: 20px 80px;
+            transition: padding 100ms ease-in-out;
+        }
+    }
+}
+
 .about-me-img {
     position: relative;
     width: 50%;
