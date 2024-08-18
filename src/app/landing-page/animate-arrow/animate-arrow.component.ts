@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './animate-arrow.component.scss'
 })
 export class AnimateArrowComponent {
-  position:number = 3;
+  position:number = 1;
 }
