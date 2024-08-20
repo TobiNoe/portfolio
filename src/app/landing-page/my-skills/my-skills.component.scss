@@ -4,22 +4,36 @@
     background: $bc-primary;
     position: relative;
     @include dFlex($ai: center, $direction: column);
+    padding: 0 100px;
 }
 
 .my-skills-headline {
     position: absolute;
+    top: -48px;
+    background: $bc-primary;
+    padding: 0 8px;
 }
 
 .my-skills-collection {
     border: 4px solid $border-black;
+    padding: 120px 0;
+    width: 100%;
 }
 
 .my-skills-icons {
-    @include dFlex($ai: center);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 128px;
+    row-gap: 70.5px;
+    padding: 0 114px;
 }
 
 .my-skills-skill {
-    @include dFlex($direction: column);
+    width: 85.71px;
+    @include dFlex($direction: column, $ai: center);
+    text-align: center;
+    gap: 10px;
 
     >img {
         height: 75px;
