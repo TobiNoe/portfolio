@@ -40,3 +40,13 @@
         width: 75px;
     }
 }
+
+.my-skills-contact {
+    @include dFlex($ai: end, $jc: center);
+    gap: 16px;
+
+    >p a {
+        text-decoration: none;
+        color: $text-secondery;
+    }
+}
