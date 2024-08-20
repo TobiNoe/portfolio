@@ -2,10 +2,16 @@
     <h2 class="my-skills-headline">My skills</h2>
     <div class="my-skills-collection">
         <div class="my-skills-icons">
-            <div>
+            @for (skill of data.mySkills; track $index) {
+            <div class="my-skills-skill">
+                <img src="{{skill.img}}" alt="">
+                <p>{{skill.name}}</p>
+            </div>
+            }
+            <!--  <div>
                 <img src="{{data.mySkills[0].img}}" alt="">
                 <p>{{data.mySkills[0].name}}</p>
-            </div>
+            </div> -->
         </div>
         <div class="my-skills-contact"></div>
     </div>
