@@ -4,7 +4,9 @@
         <div class="my-skills-icons">
             @for (skill of data.mySkills; track $index) {
             <div class="my-skills-skill">
-                <img src="{{skill.img}}" alt="">
+                <div>
+                    <img src="{{skill.img}}" alt="">
+                </div>
                 <p>{{skill.name}}</p>
             </div>
             }

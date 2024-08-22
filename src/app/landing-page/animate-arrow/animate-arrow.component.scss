@@ -1,8 +1,8 @@
 @import './../../../styles.scss';
 
-.arrow-position{
+.arrow-position {
     background: $bc-primary;
-    @include dFlex($jc: flex-end, $ai:flex-end);
+    @include dFlex($jc: flex-end, $ai: start);
     padding: 0 100px;
     height: 300px;
 }

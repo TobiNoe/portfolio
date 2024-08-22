@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { DataServiceService } from '../../shared/services/data-service.service';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-my-skills',

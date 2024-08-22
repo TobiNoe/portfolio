@@ -1,17 +1,58 @@
 @import './../../../styles.scss';
 
+
+
+@keyframes circle {
+    0% {
+        padding-left: 0;
+        height: 75px;
+    }
+
+    15% {
+        padding-left: 0;
+        height: 60px; 
+    }
+
+    30% {
+        padding-left: 51px;
+        height: 60px;
+    }
+
+    45% {
+        padding-left: 70px;
+        height: 44px;
+    }
+
+    60% {
+        padding-left: -21px;
+        height: 44px;
+    }
+
+    75% {
+        padding-left: -16px;
+        height: 60px;
+    }
+
+    100% {
+        padding-left: 0;
+        height: 75px; 
+    }
+
+
+}
+
 .my-skills {
     background: $bc-primary;
     position: relative;
     @include dFlex($ai: center, $direction: column);
-    padding: 0 100px;
+    padding: 0 100px 22px 100px;
 }
 
 .my-skills-headline {
     position: absolute;
     top: -48px;
     background: $bc-primary;
-    padding: 0 8px;
+    padding: 10px;
 }
 
 .my-skills-collection {
@@ -30,14 +71,32 @@
 }
 
 .my-skills-skill {
-    width: 85.71px;
+    width: 100px;
     @include dFlex($direction: column, $ai: center);
-    text-align: center;
     gap: 10px;
 
-    >img {
+    >div {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 76px;
         height: 75px;
-        width: 75px;
+
+        &:hover{
+            
+            >img{
+                animation: circle 500ms ease-out;
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        /* height: 75px; */
+        /* width: 100%; */
     }
 }
 
