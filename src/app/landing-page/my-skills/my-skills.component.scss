@@ -10,7 +10,7 @@
 
     15% {
         padding-left: 0;
-        height: 60px; 
+        height: 60px;
     }
 
     30% {
@@ -35,7 +35,7 @@
 
     100% {
         padding-left: 0;
-        height: 75px; 
+        height: 75px;
     }
 
 
@@ -74,6 +74,7 @@
     width: 100px;
     @include dFlex($direction: column, $ai: center);
     gap: 10px;
+    text-align: center;
 
     >div {
         position: relative;
@@ -82,21 +83,30 @@
         max-width: 76px;
         height: 75px;
 
-        &:hover{
-            
-            >img{
-                animation: circle 500ms ease-out;
-            }
+        >img {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     }
 
-    img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        
-        /* height: 75px; */
-        /* width: 100%; */
+    >p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &:hover {
+
+        >div {
+            >img {
+                animation: circle 500ms ease-out;
+            }
+        }
+
+        >p {
+            color: $text-secondery;
+            transition: color 50ms linear;
+        }
     }
 }
 
