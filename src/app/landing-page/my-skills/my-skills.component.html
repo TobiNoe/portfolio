@@ -2,10 +2,10 @@
     <h2 class="my-skills-headline">My skills</h2>
     <div class="my-skills-collection">
         <div class="my-skills-icons">
-            @for (skill of data.mySkills; track $index) {
+            @for (skill of data.mySkills; let i = $index; track $index) {
             <div class="my-skills-skill">
-                <div>
-                    <img src="{{skill.img}}" alt="">
+                <div [ngStyle]="{'max-width.px': imageWidths[i] || 'auto'}">
+                    <img #skillImage [src]="skill.img" alt="" (load)="onImageLoad(i, $event)">
                 </div>
                 <p>{{skill.name}}</p>
             </div>
