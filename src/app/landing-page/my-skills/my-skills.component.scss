@@ -117,5 +117,13 @@
     >p a {
         text-decoration: none;
         color: $text-secondery;
+        padding: 5px 10px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            font-weight: 700;
+        }
     }
 }

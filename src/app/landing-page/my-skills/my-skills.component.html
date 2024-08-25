@@ -5,7 +5,7 @@
             @for (skill of data.mySkills; let i = $index; track $index) {
             <div class="my-skills-skill">
                 <div [ngStyle]="{'max-width.px': imageWidths[i] || 'auto'}">
-                    <img #skillImage [src]="skill.img" alt="" (load)="onImageLoad(i, $event)">
+                    <img [src]="skill.img" alt="" (load)="onImageLoad(i, $event)">
                 </div>
                 <p>{{skill.name}}</p>
             </div>

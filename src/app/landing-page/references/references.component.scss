@@ -1,0 +1,15 @@
+@import './../../../styles.scss';
+
+.references {
+    background: $bc-primary;
+    padding: 0 100px;
+    @include dFlex($direction: column, $ai: center);
+
+    >h2{
+        padding-bottom: 51px;
+    }
+
+    >p{
+        padding-bottom: 40px;
+    }
+}
