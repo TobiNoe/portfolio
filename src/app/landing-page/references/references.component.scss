@@ -17,7 +17,8 @@
 }
 
 .references-div {
-    @include dFlex($jc: center);
+    width: 100%;
+    @include dFlex($jc: space-between);
     flex-wrap: wrap;
     gap: 24px;
 }
@@ -29,8 +30,23 @@
     border: solid 4px $border-black;
     @include dFlex($direction: column);
     gap: 24px;
+
+    >p {
+        font-size: 18px;
+    }
 }
 
 .reference-head {
     @include dFlex($direction: column, $ai: center);
+    >svg {
+        padding-bottom: 16px;     
+    }
+
+    >span {
+        padding-bottom: 8px;
+    }
+
+    >p {
+        font-size: 14px;
+    }
 }
