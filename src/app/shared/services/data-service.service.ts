@@ -46,7 +46,25 @@ export class DataServiceService {
       name: "Material Design",
       img: "./../../../../assets/img/mySkills/material_design.png"
     }
-  ]
+  ];
+
+  myReferences = [
+    {
+      name: "T.Nölle",
+      position: "Team Partner",
+      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+    },
+    {
+      name: "M.Nölle",
+      position: "Team Partner",
+      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+    },
+    {
+      name: "T.Nölle",
+      position: "Team Partner",
+      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+    }
+  ];
 
   constructor() { }
 }

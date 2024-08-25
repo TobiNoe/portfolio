@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DataServiceService } from '../../shared/services/data-service.service';
 
 @Component({
   selector: 'app-references',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
+  data = inject(DataServiceService);
 
 }
