@@ -57,7 +57,7 @@ export class DataServiceService {
     {
       name: "M.Nölle",
       position: "Team Partner",
-      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment. Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
     },
     {
       name: "T.Nölle",
