@@ -5,11 +5,32 @@
     padding: 0 100px;
     @include dFlex($direction: column, $ai: center);
 
-    >h2{
+    >h2 {
         padding-bottom: 51px;
     }
 
-    >p{
+    >p {
         padding-bottom: 40px;
+        width: 100%;
+        max-width: 560px;
     }
+}
+
+.references-div {
+    @include dFlex($jc: center);
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.reference {
+    width: 100%;
+    max-width: 344px;
+    padding: 24px 16px;
+    border: solid 4px $border-black;
+    @include dFlex($direction: column);
+    gap: 24px;
+}
+
+.reference-head {
+    @include dFlex($direction: column, $ai: center);
 }
