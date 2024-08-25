@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 $bc-primary: #FFFCF3;
 $bc-secondery: #000000;
-$border-black: $bc-secondery;
 $text-primary: #FFFCF3;
 $text-secondery: #00BC8F;
 $text-black: #000000;
 $text-inactive: #BBBBBB;
 $text-form-warning: #E61C40;
+$border-black: $bc-secondery;
+$border-green-cyan: $text-secondery;
 
 * {
     margin: 0;

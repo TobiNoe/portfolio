@@ -34,6 +34,16 @@
     >p {
         font-size: 18px;
     }
+
+    &:hover {
+        border-color: $border-green-cyan;
+        transition: border-color 50ms linear;
+
+        path {
+            fill: $text-secondery;
+            transition: fill 50ms linear;
+        }
+    }
 }
 
 .reference-head {
