@@ -20,4 +20,27 @@
     }
 }
 
-.project-details {}
+.project-info {
+    width: 100%;
+    max-width: 475px;
+    @include dFlex($direction: column);
+    gap: 15px;
+
+    h2 {
+        font-size: 45px;
+    }
+}
+
+.Over-400-23{
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 23px;
+    color: $text-secondery;
+}
+
+.Over-400-16{
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 16px;
+}
+
