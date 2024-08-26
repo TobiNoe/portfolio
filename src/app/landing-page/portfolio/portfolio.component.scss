@@ -1,0 +1,17 @@
+@import './../../../styles.scss';
+
+.portfolio {
+    background: $bc-primary;
+    @include dFlex($ai: center, $direction: column);
+    padding: 0 100px;
+
+    >h2 {
+        padding-bottom: 35px;
+    }
+
+    >p {
+        width: 525px;
+        text-align: center;
+        padding-bottom: 118px;
+    }
+}

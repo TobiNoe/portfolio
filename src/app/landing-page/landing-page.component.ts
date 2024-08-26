@@ -4,6 +4,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { AnimateArrowComponent } from "./animate-arrow/animate-arrow.component";
 import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { ReferencesComponent } from './references/references.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,7 +14,8 @@ import { ReferencesComponent } from './references/references.component';
     AboutMeComponent,
     AnimateArrowComponent,
     MySkillsComponent,
-    ReferencesComponent
+    ReferencesComponent,
+    PortfolioComponent
 ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
