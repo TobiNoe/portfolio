@@ -9,8 +9,15 @@
 
 .project-image {
     width: 50%;
+    padding: 33px 0;
+
+    img {
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: none;
+        }
+    }
 }
 
-.project-details {
-    
-}
+.project-details {}
