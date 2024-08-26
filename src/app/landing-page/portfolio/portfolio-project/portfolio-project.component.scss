@@ -1,0 +1,16 @@
+@import './../../../../styles.scss';
+
+.project {
+    @include dFlex($jc: space-between);
+    color: $text-black;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.project-image {
+    width: 50%;
+}
+
+.project-details {
+    
+}
