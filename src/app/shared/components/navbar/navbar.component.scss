@@ -19,7 +19,18 @@
     }
 }
 
-.navabr-menu {
+.navbar-menu {
     background: $bc-primary;
-    @include dFlex($direction: column, $ai: space-between);
+    @include dFlex($direction: column, $ai: center);
+
+    a {
+        text-decoration: none;
+        color: $text-black;
+        padding: 36px 38px;
+    }
+
+    h2 {
+        font-size: 96px;
+        font-weight: 700;
+    }
 }
