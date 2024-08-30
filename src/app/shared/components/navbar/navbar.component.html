@@ -1,6 +1,11 @@
 <div class="navbar">
     <div class="navbar-logo">Logo einfügen</div>
-    <div class="navbar-hmenu">
-        <img src="./../../../../../assets/img/navbar/burger_1.png" alt="hamburger-menu">
+    <div (click)="toggleMenu()" class="navbar-hmenu">
+        <img [src]="hmenuImg" alt="hamburger-menu">
     </div>
+</div>
+<div class="navabr-menu" [style]="displayToggle">
+    <h3>About Me</h3>
+    <h3>My skills</h3>
+    <h3>Portfolio</h3>
 </div>

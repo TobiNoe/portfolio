@@ -1,5 +1,4 @@
 @import './../../../../styles.scss';
-
 .navbar {
     position: sticky;
     @include dFlex($jc: space-between);
@@ -10,4 +9,17 @@
 
 .navbar-logo {
     color: $text-black;
+}
+
+.navbar-hmenu {
+
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.navabr-menu {
+    background: $bc-primary;
+    @include dFlex($direction: column, $ai: space-between);
 }

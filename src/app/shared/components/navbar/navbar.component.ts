@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  hmenuImg:string = "./../../../../../assets/img/navbar/burger_1.png"
+  displayToggle:string = "display: none"
 
+  toggleMenu(){
+    this.displayToggle = "display: flex";
+  }
 }
