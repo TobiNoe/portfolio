@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  @Output() openCloseEvent = new EventEmitter<boolean>();
   hmenuImg:string = "./../../../../../assets/img/navbar/burger_1.png"
   menuIsToggled:boolean = false;
   
 
   toggleMenu(){
     this.menuIsToggled = !this.menuIsToggled;
+    this.openCloseEvent.emit(!this.menuIsToggled);
   }
 }

@@ -1,8 +1,9 @@
-<app-hero></app-hero>
-<app-about-me />
-<app-animate-arrow />
-<app-my-skills id="mySkills" />
-<app-animate-arrow />
-<app-portfolio id="portfolio" />
-<app-references />
-<app-animate-arrow />
+<app-navbar (openCloseEvent)="togglePageView($event)"></app-navbar>
+<app-hero [ngClass]="pageViewToggled ? 'show' : 'hide'"></app-hero>
+<app-about-me [ngClass]="pageViewToggled ? 'show' : 'hide'" />
+<app-animate-arrow [ngClass]="pageViewToggled ? 'show' : 'hide'" />
+<app-my-skills [ngClass]="pageViewToggled ? 'show' : 'hide'" id="mySkills" />
+<app-animate-arrow [ngClass]="pageViewToggled ? 'show' : 'hide'" />
+<app-portfolio [ngClass]="pageViewToggled ? 'show' : 'hide'" id="portfolio" />
+<app-references [ngClass]="pageViewToggled ? 'show' : 'hide'" />
+<app-animate-arrow [ngClass]="pageViewToggled ? 'show' : 'hide'" />

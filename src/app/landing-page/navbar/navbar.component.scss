@@ -1,6 +1,8 @@
-@import './../../../../styles.scss';
+@import './../../../styles.scss';
 .navbar {
     position: sticky;
+    top: 0;
+    z-index: 3;
     @include dFlex($jc: space-between);
     color: $text-black;
     background: $bc-primary;
