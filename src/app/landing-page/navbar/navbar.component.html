@@ -1,19 +1,19 @@
 <div class="navbar">
-    <div class="navbar-logo">Logo einfügen</div>
-    <div (click)="toggleMenu()" class="navbar-hmenu">
-        <img [src]="hmenuImg" alt="hamburger-menu">
+    <div class="nav-headline">
+        <div class="navbar-logo">Logo einfügen</div>
+        <div (click)="toggleMenu()" class="navbar-hmenu">
+            <img [src]="hmenuImg" alt="hamburger-menu">
+        </div>
     </div>
-</div>
-<!-- TODO: change displayToggle to an boolschen value and change the class with show or hide style -->
-<!-- <div class="navbar-menu" [ngClass]="{'menu-hide': !menuIsToggled, 'menu-show': menuIsToggled}"> -->
-<div class="navbar-menu"  [ngClass]="menuIsToggled ? 'menu-show' : 'menu-hide'">
-    <a (click)="toggleMenu()" href="#aboutMe">
-        <h2>About me</h2>
-    </a>
-    <a (click)="toggleMenu()" href="#mySkills">
-        <h2>My skills</h2>
-    </a>
-    <a (click)="toggleMenu()" href="#portfolio">
-        <h2>Portfolio</h2>
-    </a>
+    <div class="navbar-menu" [ngClass]="menuIsToggled ? 'menu-show' : 'menu-hide'">
+        <a (click)="toggleMenu()" href="#aboutMe">
+            <h2>About me</h2>
+        </a>
+        <a (click)="toggleMenu()" href="#mySkills">
+            <h2>My skills</h2>
+        </a>
+        <a (click)="toggleMenu()" href="#portfolio">
+            <h2>Portfolio</h2>
+        </a>
+    </div>
 </div>

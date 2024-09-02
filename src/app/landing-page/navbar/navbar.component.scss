@@ -1,12 +1,17 @@
 @import './../../../styles.scss';
+
 .navbar {
     position: sticky;
     top: 0;
     z-index: 3;
-    @include dFlex($jc: space-between);
+    @include dFlex($direction: column);
     color: $text-black;
     background: $bc-primary;
     padding: 30px 100px;
+}
+
+.nav-headline {
+    @include dFlex($direction: row, $jc: space-between)
 }
 
 .navbar-logo {
