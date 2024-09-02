@@ -10,11 +10,17 @@
     }
 }
 
+.placeholder {
+    height: 182px;
+    background: linear-gradient(7deg, $bc-secondery 50%, $bc-primary 50%);
+}
+
 .footer {
     background: $bc-secondery;
     color: $text-primary;
     padding-left: 100px;
     padding-right: 100px;
+
 
     .form-div {
         @include dFlex($direction: column, $ai: center);
