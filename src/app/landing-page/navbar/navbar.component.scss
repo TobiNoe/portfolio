@@ -27,6 +27,10 @@
 }
 
 .navbar-menu {
+    position: absolute;
+    top: 102px;
+    left: 0;
+    right: 0;
     background: $bc-primary;
     @include dFlex($direction: column, $ai: center);
 

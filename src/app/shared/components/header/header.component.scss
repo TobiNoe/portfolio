@@ -1,0 +1,24 @@
+@import './../../../../styles.scss';
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    height: 102px;
+    @include dFlex($jc: space-between);
+    color: $text-black;
+    background: $bc-primary;
+    padding: 30px 100px;
+}
+
+.header-logo {
+    color: $text-black;
+}
+
+.header-hmenu {
+
+
+    &:hover {
+        cursor: pointer;
+    }
+}
