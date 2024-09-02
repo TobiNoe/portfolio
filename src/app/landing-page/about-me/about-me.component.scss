@@ -2,9 +2,7 @@
 
 .about-me {
     @include dFlex();
-    padding: 0 100px;
-    /* width: 100%; */
-    /* max-width: 1259px; */
+    padding: 102px 100px 0;
     height: 681px;
     background: $bc-primary;
 }
