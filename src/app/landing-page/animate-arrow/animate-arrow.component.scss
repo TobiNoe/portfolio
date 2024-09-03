@@ -2,7 +2,19 @@
 
 .arrow-position {
     background: $bc-primary;
-    @include dFlex($jc: flex-end, $ai: start);
+    @include dFlex($ai: start);
     padding: 0 100px;
     height: 300px;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.rotate-arrow {
+    rotate: 270deg;;
 }

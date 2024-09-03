@@ -1,22 +1,12 @@
-<div class="arrow-position">
-    <div class="arrow-animation">
+<div class="arrow-position" [ngClass]="positionArrow == 'left' ? 'left' : 'right'">
 
-        @if (position == 1) {
+    
+    <div class="arrow-animation" [ngClass]="positionArrow == 'left' ? 'rotate-arrow' : ''">
         <svg width="236" height="235" viewBox="0 0 236 235" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M42.1074 110.893V193.519H124.734" stroke="black" stroke-width="4" />
             <path d="M194.313 41.3135L42.106 193.521" stroke="black" stroke-width="4" />
         </svg>
-        }@else if (position == 2) {
-        <svg width="307" height="307" viewBox="0 0 307 307" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M41.3154 182.893V265.52H123.942" stroke="black" stroke-width="4" />
-            <path d="M265.313 41.5217L41.3135 265.522" stroke="black" stroke-width="4" />
-        </svg>
-        }@else if (position == 3) {
-        <svg width="236" height="235" viewBox="0 0 236 235" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M42.1074 110.893V193.52H124.734" stroke="black" stroke-width="4" />
-            <path d="M194.313 41.3135L42.106 193.521" stroke="black" stroke-width="4" />
-        </svg>
-        }
-
     </div>
+    
+
 </div>
