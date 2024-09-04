@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar" [ngClass]="menuIsToggled ? 'menu-show-height' : ''">
     <div class="nav-headline">
         <div class="navbar-logo">Logo einfügen</div>
         <div (click)="toggleMenu()" class="navbar-hmenu">
@@ -15,5 +15,6 @@
         <a (click)="toggleMenu()" href="#portfolio">
             <h2>Portfolio</h2>
         </a>
+        <div class="placeholder-navbar"></div>
     </div>
 </div>
