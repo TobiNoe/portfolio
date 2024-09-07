@@ -19,28 +19,32 @@ export class NavbarComponent {
 
   toggleMenu() {
     if (!this.menuIsToggled) {
-      for (let index = 0; index < this.data.navbarImg.length; index++) {
-        const img = this.data.navbarImg[index];
-
-        setTimeout(() => {
-          this.hmenuImg = img;
-        }, index * 100);
-      }
+      this.renderImgForward();
     } else {
-      for (let index = 4; index >= 0; index--) {
-        const img = this.data.navbarImg[index];
-
-
-        setTimeout(() => {
-          this.hmenuImg = img;
-          console.log('img :>> ', this.hmenuImg);
-        }, (4 - index) * 100);
-      }
+      this.renderImgBachward();
     }
-
-    /* this.hmenuImg = this.data.navbarImg[4]; */
     this.menuIsToggled = !this.menuIsToggled;
-
     /* this.openCloseEvent.emit(!this.menuIsToggled); */
   }
+
+  renderImgForward() {
+    for (let index = 0; index < this.data.navbarImg.length; index++) {
+      const img = this.data.navbarImg[index];
+      setTimeout(() => {
+        this.hmenuImg = img;
+      }, index * 100);
+    }
+  }
+
+  renderImgBachward(){
+    for (let index = 4; index >= 0; index--) {
+      const img = this.data.navbarImg[index];
+      setTimeout(() => {
+        this.hmenuImg = img;
+      }, (4 - index) * 100);
+    }
+  }
+
 }
+
+
