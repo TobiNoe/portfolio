@@ -19,7 +19,10 @@
 }
 
 .navbar-hmenu {
-
+    >img {
+        width: 40px;
+        height: 32px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -28,8 +31,8 @@
 
 .navbar-menu {
     position: absolute;
-    height: calc(100svh - 102px);
-    top: 102px;
+    height: calc(100svh - 96px);
+    top: 96px;
     left: 0;
     right: 0;
     bottom: 0;
