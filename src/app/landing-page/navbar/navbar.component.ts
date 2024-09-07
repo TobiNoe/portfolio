@@ -1,7 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { DataServiceService } from '../../shared/services/data-service.service';
-import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +14,6 @@ export class NavbarComponent {
   @Output() openCloseEvent = new EventEmitter<boolean>();
   hmenuImg: string = this.data.navbarImg[0];
   menuIsToggled: boolean = false;
-
 
   toggleMenu() {
     if (!this.menuIsToggled) {
@@ -44,7 +42,6 @@ export class NavbarComponent {
       }, (4 - index) * 100);
     }
   }
-
 }
 
 
