@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { DataServiceService } from '../../shared/services/data-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,13 +10,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  data = inject(DataServiceService);
   @Output() openCloseEvent = new EventEmitter<boolean>();
-  hmenuImg:string = "./../../../../../assets/img/navbar/burger_1.png"
+  hmenuImg:string = this.data.navbarImg[0];
   menuIsToggled:boolean = false;
   
 
   toggleMenu(){
+    this.hmenuImg = this.data.navbarImg[4];
     this.menuIsToggled = !this.menuIsToggled;
-    this.openCloseEvent.emit(!this.menuIsToggled);
+
+    /* this.openCloseEvent.emit(!this.menuIsToggled); */
   }
 }

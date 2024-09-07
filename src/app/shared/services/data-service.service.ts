@@ -66,5 +66,13 @@ export class DataServiceService {
     }
   ];
 
+  navbarImg = [
+    "./../../../../../assets/img/navbar/burger_1.png",
+    "./../../../../../assets/img/navbar/burger_2.png",
+    "./../../../../../assets/img/navbar/burger_3.png",
+    "./../../../../../assets/img/navbar/burger_4.png",
+    "./../../../../../assets/img/navbar/burger_5.png"
+  ];
+
   constructor() { }
 }
