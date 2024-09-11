@@ -43,13 +43,26 @@
     a {
         text-decoration: none;
         color: $text-black;
-        padding: 0 100px;
         text-align: center;
     }
 
     h2 {
         font-size: 96px;
         font-weight: 700;
+        width: 556px;
+        border-left: $border-black solid 4px;
+        border-right: transparent solid 4px;
+        border-top: transparent solid 4px;
+        border-bottom: $border-black solid 4px;
+
+        &:active {
+            border-right: $border-black solid 4px;
+            border-top: $border-black solid 4px;
+        }
+
+        &:hover {
+            border-left-color: transparent;
+        }
     }
 }
 

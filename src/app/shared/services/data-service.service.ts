@@ -50,9 +50,9 @@ export class DataServiceService {
 
   myReferences = [
     {
-      name: "T.Nölle",
-      position: "Team Partner",
-      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+      name: "D. Mages",
+      position: "DA Student",
+      reference: "Tobias ist ein inspirierender Kommilitone bei der DA. Seine motivierende Art steckt einen an und reißt einen mit sich.Dazu kommt noch die Eigenschaft das Interesse zu entwickeln, sich mit Problemen jenseits seines Tellerrands zu beschäftigen."
     },
     {
       name: "M.Nölle",
@@ -60,9 +60,9 @@ export class DataServiceService {
       reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment. Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
     },
     {
-      name: "T.Nölle",
-      position: "Team Partner",
-      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+      name: "S. Stuber",
+      position: "DA Student",
+      reference: "Tobias habe ich während der Weiterbildung zum Fullstack-Entwickler kennengelernt. Seine Leidenschaft und seine offene Art haben mich sehr begeistert, und daraus entwickelte sich ein regelmäßiger Austausch. Für Tobias gibt es kein Hindernis, sondern die Frage: Wie gehen wir es an, um eine Lösung zu entwickeln? Kurz gesagt – ein smarter Typ, den man gerne um sich hat."
     }
   ];
 
