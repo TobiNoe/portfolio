@@ -10,13 +10,13 @@
 
 .hero {
     height: 100svh;
+    max-width: 1240px;
     background: #FFFCF3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0 100px;
 }
 
 .hero-headline {
