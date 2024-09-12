@@ -20,6 +20,7 @@
 }
 
 .hero-headline {
+    height: 40%;
     display: flex;
     flex-direction: column;
 
@@ -30,12 +31,19 @@
 
 .hero-name {
     width: 100%;
+    max-width: 1019px;
     display: flex;
     align-items: center;
     gap: 8px;
 
     >h3 {
         color: #00BC8F;
+    }
+
+    >svg {
+        width: 100%;
+        max-width: 677px;
+        flex: 1;
     }
 }
 
@@ -54,6 +62,10 @@
         flex-direction: column;
         align-items: center;
     }
+
+    p {
+        text-align: center;
+    }
 }
 
 .hero-scroll {
@@ -62,4 +74,22 @@
     >svg {
         animation: slide 5s ease-in infinite;
     }
+}
+
+@media only screen and (max-width: 960px) {
+    .hero {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 0 25px;
+    }
+
+    .hero-mail-scroll {
+        padding-bottom: 25px;
+    }
+
+
 }

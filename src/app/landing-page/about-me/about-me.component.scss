@@ -2,7 +2,7 @@
 
 .about-me {
     @include dFlex();
-    padding: 102px 100px 0;
+    padding: 96px 100px 0;
     height: 681px;
     background: $bc-primary;
 }
@@ -72,5 +72,17 @@
     .about-me-outline-color {
         outline-color: $border-black;
         transition: outline-color 50ms linear;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .about-me {
+        padding: 96px 50px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-me {
+        padding: 96px 25px 0;
     }
 }

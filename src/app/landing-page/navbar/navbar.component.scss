@@ -79,3 +79,15 @@
     height: 182px;
     background: linear-gradient(7deg, $bc-secondery 50%, $bc-primary 50%);
 }
+
+@media only screen and (max-width: 960px) {
+    .nav-headline {
+        padding: 30px 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-headline {
+        padding: 30px 25px;
+    }
+}

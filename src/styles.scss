@@ -20,19 +20,19 @@ body {
 }
 
 h1 {
-    font-size: 128px;
+    font-size: clamp(45px, 9vw, 128px);
     font-family: 'Syne';
     font-weight: 800;
 }
 
 h2 {
-    font-size: 78px;
+    font-size: clamp(36px, 9vw, 78px);
     font-family: 'Syne';
     font-weight: 800;
 }
 
 h3 {
-    font-size: 48px;
+    font-size: clamp(23px, 4vw, 48px);
     font-family: 'Overpass';
     font-weight: 700;
 }
@@ -44,7 +44,7 @@ h4 {
 }
 
 p {
-    font-size: 22px;
+    font-size: clamp(20px, 4vw, 22px);
     font-family: 'Overpass';
     font-weight: 400;
 }
