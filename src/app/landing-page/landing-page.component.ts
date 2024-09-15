@@ -6,7 +6,7 @@ import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { ReferencesComponent } from './references/references.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-landing-page',
@@ -19,7 +19,6 @@ import { NgClass } from '@angular/common';
     MySkillsComponent,
     ReferencesComponent,
     PortfolioComponent,
-    NgClass
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
