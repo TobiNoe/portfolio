@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="navbar-menu" [ngClass]="menuIsToggled ? 'menu-show' : 'menu-hide'">
-        <a routerLink="/aboutMe" (click)="toggleMenu()"> <!-- href="#aboutMe" -->
+        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')"> <!-- href="#aboutMe" -->
             <h2>About me</h2>
         </a>
         <a (click)="toggleMenu()" href="#mySkills">

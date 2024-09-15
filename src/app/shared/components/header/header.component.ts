@@ -44,4 +44,11 @@ export class HeaderComponent {
     }
   }
 
+  scrollToFragment(fragment: string): void {
+    const element = document.querySelector(fragment);
+    console.log('element :>> ', element);  
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+  }
 }
