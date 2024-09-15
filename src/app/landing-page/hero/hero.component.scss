@@ -9,13 +9,13 @@
 }
 
 .hero {
-    height: 100svh;
+    height: calc(100svh - 96px);
     max-width: 1240px;
     background: #FFFCF3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 100px;
 }
 
@@ -51,6 +51,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 0 50px;
 
     >p {
         writing-mode: tb-rl;
@@ -61,10 +62,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    p {
-        text-align: center;
+        justify-content: end;
+        max-width: 60px;
     }
 }
 
