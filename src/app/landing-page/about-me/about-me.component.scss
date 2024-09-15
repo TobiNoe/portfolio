@@ -2,23 +2,28 @@
 
 .about-me {
     scroll-margin-top: 96px;
-    @include dFlex();
-    padding: 0 100px 0;
-    height: 681px;
+    @include dFlex($direction: column);
+    padding: 0 100px;
     background: $bc-primary;
+
+    >h2 {
+        padding-bottom: 48px;
+
+        &:hover {
+            color: $text-secondery;
+            transition: color 50ms linear;
+        }
+    }
+
+    >div {
+        @include dFlex();
+    }
 }
 
 .about-me-info {
     width: 50%;
     @include dFlex($direction: column);
     gap: 48px;
-
-    >h2 {
-        &:hover {
-            color: $text-secondery;
-            transition: color 50ms linear;
-        }
-    }
 
     >div {
         @include dFlex($jc: center, $direction: column);
@@ -32,7 +37,8 @@
 }
 
 .about-me-button {
-    align-items: center!important;
+    align-items: center !important;
+    padding: 0 0 5px;
 
     >a {
         text-decoration: none;
@@ -54,20 +60,22 @@
 .about-me-img {
     position: relative;
     width: 50%;
-    @include dFlex($jc: flex-end, $ai: flex-end);
+    @include dFlex($jc: flex-end, $ai: flex-start);
 
     >img {
-        width: 533px;
-        height: 533px;
+        width: 100%;
+        max-width: 533px;
+        aspect-ratio: 1 / 1;
         padding: 0 20px 20px 0;
     }
 
     .about-me-outline {
-        display: block;
         position: absolute;
-        width: 533px;
-        height: 533px;
+        width: 100%;
+        max-width: 533px;
+        aspect-ratio: 1 / 1;
         outline: 4px solid transparent;
+        margin: 20px 0 0 20px;
     }
 
     .about-me-outline-color {
@@ -76,14 +84,58 @@
     }
 }
 
+@media only screen and (max-width: 1190px) {
+    .about-me {
+        padding: 0 50px;
+
+        >h2 {
+            padding-bottom: 32px;
+        }
+
+        >div {
+            flex-direction: column;
+        }
+    }
+
+    .about-me-info {
+        width: 100%;
+        gap: 32px;
+    }
+
+    .about-me-img {
+        @include dFlex($jc: center);
+        width: 100%;
+
+        >img {
+            padding: 0;
+        }
+
+        .about-me-outline {
+            margin: 15px 0 0 15px;
+        }
+    }
+}
+
 @media only screen and (max-width: 960px) {
     .about-me {
-        padding: 96px 50px 0;
+        padding: 0 50px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .about-me {
-        padding: 96px 25px 0;
+        padding: 0 25px;
+    }
+
+    .about-me-img {
+
+        >img {
+            min-width: 390px;
+        }
+
+        .about-me-outline {
+            margin: 10px 0 0 10px;
+            min-width: 390px;
+        }
     }
 }
