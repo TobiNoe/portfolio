@@ -1,5 +1,17 @@
 @import './../../../../styles.scss';
 
+@keyframes hover-slide {
+    from {
+        width: 100%;
+        left: 0;
+    }
+
+    to {
+        width: 40%;
+        left: 60%;
+    }
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -41,32 +53,34 @@
     @include dFlex($direction: column, $ai: center, $jc: space-between);
 
     a {
+        position: relative;
         text-decoration: none;
         color: $text-black;
         text-align: center;
         width: 50%;
         max-width: 556px;
-        padding: 16px;
+        padding: 35px;
 
-        border-left: $border-black solid 4px;
-        border-right: transparent solid 4px;
-        border-top: transparent solid 4px;
-        border-bottom: $border-black solid 4px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 25%;
+            width: 5%;
+            border-bottom: 4px solid $border-black;
+            border-left: 4px solid $border-black;
+        }
 
         &:active {
             border-right: $border-black solid 4px;
             border-top: $border-black solid 4px;
         }
 
-        &:hover {
-            border-left-color: transparent;
+        &:hover::before {
+            height: 0px;
+            animation: hover-slide 100ms ease-out forwards;
         }
-
-
-    }
-
-    h2 {
-        /* width: 100%; */
     }
 }
 
