@@ -42,19 +42,20 @@
 }
 
 .my-skills {
+    scroll-margin-top: 96px;
     background: $bc-primary;
     position: relative;
     @include dFlex($ai: center, $direction: column);
-    padding: 0 100px 22px 100px;
+    padding: 60px 100px 22px 100px;
 }
 
-.placeholder {
+/* .placeholder {
     padding-top: 150px;
-}
+} */
 
 .my-skills-headline {
     position: absolute;
-    top: 90px;
+    top: 0;
     background: $bc-primary;
     padding: 10px;
 }
