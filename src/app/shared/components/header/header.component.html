@@ -6,14 +6,14 @@
         </div>
     </div>
     <div class="navbar-menu" [ngClass]="menuIsToggled ? 'menu-show' : 'menu-hide'">
-        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')"> <!-- href="#aboutMe" -->
-            <h2>About me</h2>
+        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')">
+            <h2 class="syne-700-45-96">About me</h2>
         </a>
-        <a (click)="toggleMenu()" href="#mySkills">
-            <h2>My skills</h2>
+        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#mySkills')">
+            <h2 class="syne-700-45-96">My skills</h2>
         </a>
-        <a (click)="toggleMenu()" href="#portfolio">
-            <h2>Portfolio</h2>
+        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#portfolio')">
+            <h2 class="syne-700-45-96">Portfolio</h2>
         </a>
         <div class="placeholder-navbar"></div>
     </div>

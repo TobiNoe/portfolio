@@ -44,12 +44,10 @@
         text-decoration: none;
         color: $text-black;
         text-align: center;
-    }
+        width: 50%;
+        max-width: 556px;
+        padding: 16px;
 
-    h2 {
-        font-size: 96px;
-        font-weight: 700;
-        width: 556px;
         border-left: $border-black solid 4px;
         border-right: transparent solid 4px;
         border-top: transparent solid 4px;
@@ -63,6 +61,12 @@
         &:hover {
             border-left-color: transparent;
         }
+
+
+    }
+
+    h2 {
+        /* width: 100%; */
     }
 }
 
