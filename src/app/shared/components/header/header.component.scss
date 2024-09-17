@@ -57,11 +57,11 @@
         text-decoration: none;
         color: $text-black;
         text-align: center;
-        width: 50%;
+        width: 55%;
         max-width: 556px;
         padding: 35px;
 
-        &:before {
+        &::before {
             content: "";
             position: absolute;
             left: 0;
@@ -72,14 +72,16 @@
             border-left: 4px solid $border-black;
         }
 
-        &:active {
-            border-right: $border-black solid 4px;
-            border-top: $border-black solid 4px;
-        }
-
         &:hover::before {
             height: 0px;
-            animation: hover-slide 100ms ease-out forwards;
+            animation: hover-slide 100ms forwards;
+        }
+
+        &:active::before {
+            animation: none;
+            height: 100%;
+            width: 100%;
+            border: 4px solid $border-black;
         }
     }
 }
@@ -107,5 +109,12 @@
 @media only screen and (max-width: 768px) {
     .nav-headline {
         padding: 30px 25px;
+    }
+
+    .navbar-menu {
+        a {
+            width: 65%;
+            padding: 25px;
+        }
     }
 }
