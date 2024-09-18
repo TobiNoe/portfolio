@@ -46,6 +46,7 @@
     background: $bc-primary;
     position: relative;
     @include dFlex($ai: center, $direction: column);
+    /* TODO: change padding writing 22px 100px + responsive  */
     padding: 22px 100px 22px;
 }
 
