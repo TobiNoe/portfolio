@@ -46,18 +46,21 @@
     background: $bc-primary;
     position: relative;
     @include dFlex($ai: center, $direction: column);
-    padding: 60px 100px 22px 100px;
+    padding: 22px 100px 22px;
 }
 
-/* .placeholder {
-    padding-top: 150px;
-} */
+.placeholder {
+    position: relative;
+    top: 37px;
+    height: 78px;
+    width: 100%;
+    @include dFlex($ai: center, $jc: center);
+    margin-top: -37px;
+}
 
 .my-skills-headline {
-    position: absolute;
-    top: 0;
     background: $bc-primary;
-    padding: 10px;
+    padding:  0 10px;
 }
 
 .my-skills-collection {
@@ -67,13 +70,13 @@
 }
 
 .my-skills-icons {
-    //display flex einfügen!!!!!!!!!
+    width: 100%;
+    max-width: 1238px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 128px;
     row-gap: 70.5px;
-    padding: 0 114px;
 }
 
 .my-skills-skill {
@@ -81,26 +84,19 @@
     @include dFlex($direction: column, $ai: center);
     gap: 10px;
     text-align: center;
-
-    >div {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        /* max-width: 76px; */
-        height: 75px;
-
-        >img {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-    }
+    overflow: hidden;
 
     >p {
         font-size: 16px;
         font-weight: 700;
+
+        &:hover {
+            color: $text-secondery;
+            transition: color 50ms linear;
+        }
     }
 
+    /* TODO: build new animation and FIXME: scss */
     &:hover {
 
         >div {
@@ -108,22 +104,24 @@
                 animation: circle 500ms ease-out;
             }
         }
-
-        >p {
-            color: $text-secondery;
-            transition: color 50ms linear;
-        }
     }
 }
 
 .my-skills-contact {
-    @include dFlex($ai: end, $jc: center);
+    @include dFlex($jc: center);
+    padding: 42px 10px 0;
     gap: 16px;
 
-    >p a {
+    >div {
+        @include dFlex($ai: end)
+    }
+
+    a {
+        font-size: 22px;
+        font-family: 'Overpass';
         text-decoration: none;
         color: $text-secondery;
-        padding: 5px 10px;
+        padding: 0 10px;
 
         &:hover {
             cursor: pointer;
@@ -131,5 +129,65 @@
             text-underline-offset: 8px;
             font-weight: 700;
         }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .my-skills-contact {
+        align-items: center;
+
+        >div {
+            @include dFlex($direction: column, $ai: start, $jc: center);
+        }
+
+        a {
+            font-size: 20px;
+            padding: 5px 0;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .my-skills {
+        padding: 22px 50px 22px;
+    }
+
+    .my-skills-collection {
+        padding: 60px 0;
+    }
+
+    .my-skills-icons {
+        column-gap: 64px;
+        row-gap: 36px;
+    }
+
+    .my-skills-skill {
+        width: 100px;
+        @include dFlex($direction: column, $ai: center);
+        gap: 10px;
+        text-align: center;
+
+        >img {
+            height: 60px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .my-skills {
+        padding: 22px 25px 22px;
+    }
+
+    .my-skills-collection {
+        padding: 48px 0;
+    }
+
+    .my-skills-icons {
+        column-gap: 32px;
+        row-gap: 18px;
     }
 }
