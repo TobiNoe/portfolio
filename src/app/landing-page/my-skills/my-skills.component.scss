@@ -4,38 +4,39 @@
 
 @keyframes circle {
     0% {
-        padding-left: 0;
+        left: 0;
         height: 75px;
+        padding-bottom: 0;
     }
 
-    15% {
-        padding-left: 0;
-        height: 60px;
+    20% {
+        left: 30px;
+        height: 75px;
+        padding-bottom: 0;
     }
 
-    30% {
-        padding-left: 51px;
-        height: 60px;
-    }
-
-    45% {
-        padding-left: 70px;
-        height: 44px;
+    40% {
+        left: 50px;
+        height: 58px;
+        padding-bottom: 17px;
     }
 
     60% {
-        padding-left: -21px;
-        height: 44px;
+        left: -50px;
+        height: 58px;
+        padding-bottom: 17px;
     }
 
-    75% {
-        padding-left: -16px;
-        height: 60px;
+    80% {
+        left: -30px;
+        height: 75px;
+        padding-bottom: 0;
     }
 
     100% {
-        padding-left: 0;
+        left: 0;
         height: 75px;
+        padding-bottom: 0;
     }
 
 
@@ -61,7 +62,12 @@
 
 .my-skills-headline {
     background: $bc-primary;
-    padding:  0 10px;
+    padding: 0 10px;
+
+    &:hover {
+        color: $text-secondery;
+        transition: color 50ms linear;
+    }
 }
 
 .my-skills-collection {
@@ -77,7 +83,7 @@
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 128px;
-    row-gap: 70.5px;
+    row-gap: 70px;
 }
 
 .my-skills-skill {
@@ -87,23 +93,28 @@
     text-align: center;
     overflow: hidden;
 
+    >img {
+        position: relative;
+        height: 75px;
+    }
+
     >p {
         font-size: 16px;
         font-weight: 700;
-
-        &:hover {
-            color: $text-secondery;
-            transition: color 50ms linear;
-        }
     }
 
-    /* TODO: build new animation and FIXME: scss */
+    /* TODO: build new animation for contact icon */
     &:hover {
 
-        >div {
-            >img {
-                animation: circle 500ms ease-out;
-            }
+
+        >img {
+            animation: circle 500ms ease-out;
+        }
+
+
+        >p {
+            color: $text-secondery;
+            transition: color 50ms linear;
         }
     }
 }
