@@ -38,8 +38,6 @@
         height: 75px;
         padding-bottom: 0;
     }
-
-
 }
 
 .my-skills {
@@ -106,11 +104,9 @@
     /* TODO: build new animation for contact icon */
     &:hover {
 
-
         >img {
             animation: circle 500ms ease-out;
         }
-
 
         >p {
             color: $text-secondery;
@@ -164,6 +160,45 @@
 }
 
 @media only screen and (max-width: 960px) {
+    @keyframes circle2 {
+        0% {
+            left: 0;
+            height: 60px;
+            padding-bottom: 0;
+        }
+    
+        20% {
+            left: 30px;
+            height: 60px;
+            padding-bottom: 0;
+        }
+    
+        40% {
+            left: 50px;
+            height: 43px;
+            padding-bottom: 17px;
+        }
+    
+        60% {
+            left: -50px;
+            height: 43px;
+            padding-bottom: 17px;
+        }
+    
+        80% {
+            left: -30px;
+            height: 60px;
+            padding-bottom: 0;
+        }
+    
+        100% {
+            left: 0;
+            height: 60px;
+            padding-bottom: 0;
+        }
+    }
+    
+
     .my-skills {
         padding: 22px 50px 22px;
     }
@@ -185,6 +220,13 @@
 
         >img {
             height: 60px;
+        }
+
+        &:hover {
+
+            >img {
+                animation: circle2 500ms ease-out;
+            }
         }
     }
 }
