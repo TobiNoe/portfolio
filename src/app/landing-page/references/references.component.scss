@@ -7,18 +7,24 @@
 
     >h2 {
         padding-bottom: 51px;
+
+        &:hover {
+            color: $text-secondery;
+            transition: color 50ms linear;
+        }
     }
 
     >p {
         padding-bottom: 40px;
         width: 100%;
         max-width: 560px;
+        text-align: center;
     }
 }
 
 .references-div {
     width: 100%;
-    @include dFlex($jc: space-between);
+    @include dFlex($jc: center);
     flex-wrap: wrap;
     gap: 24px;
 }
@@ -48,8 +54,9 @@
 
 .reference-head {
     @include dFlex($direction: column, $ai: center);
+
     >svg {
-        padding-bottom: 16px;     
+        padding-bottom: 16px;
     }
 
     >span {
@@ -58,5 +65,21 @@
 
     >p {
         font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .references {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .references {
+        padding: 0 25px;
+
+        >h2 {
+            padding-bottom: 40px;
+        }
     }
 }
