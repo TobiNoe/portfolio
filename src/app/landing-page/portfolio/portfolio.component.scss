@@ -8,7 +8,7 @@
 
     >h2 {
         padding-bottom: 35px;
-        
+
         &:hover {
             color: $text-secondery;
             transition: color 50ms linear;
@@ -29,4 +29,16 @@
 
 .project-width {
     width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .portfolio {
+        padding: 0 50px 120px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio {
+        padding: 0 25px 60px;
+    }
 }
