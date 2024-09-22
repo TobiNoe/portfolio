@@ -111,8 +111,40 @@
     }
 }
 
+@keyframes circle-contact-responsive {
+    0% {
+        left: 0;
+        height: 60px;
+    }
+
+    20% {
+        left: 50px;
+        height: 60px;
+    }
+
+    40% {
+        left: 50px;
+        height: 43px;
+    }
+
+    60% {
+        left: -50px;
+        height: 43px;
+    }
+
+    80% {
+        left: -50px;
+        height: 60px;
+    }
+
+    100% {
+        left: 0;
+        height: 60px;
+    }
+}
+
 .my-skills {
-    scroll-margin-top: 96px;
+    scroll-margin-top: calc(96px - 26px);
     background: $bc-primary;
     position: relative;
     @include dFlex($ai: center, $direction: column);
@@ -190,7 +222,7 @@
     gap: 8px;
 
     .my-skills-contact-img {
-        @include dFlex($jc: center, $ai: center);
+        @include dFlex($jc: center, $ai: end);
         width: 100px;
         height: 75px;
         overflow: hidden;
@@ -282,9 +314,20 @@
     }
 
     .my-skills-contact {
-        >svg {
-            width: 60px;
-            height: 60px;
+
+        .my-skills-contact-img {
+    
+            >svg {
+                width: 60px;
+                height: 60px;
+            }
+    
+            &:hover {
+    
+                >svg {
+                    animation: circle-contact-responsive 500ms ease-out;
+                }
+            }
         }
     }
 }
