@@ -1,17 +1,20 @@
 <section class="project">
     <div>
-        <div class="project-image">
-            <a href={{projectData.link}} target="_blank" rel="noopener noreferrer"><img
-                    src={{projectData.img}} alt=""></a>
-            <div class="portfolio-outline"></div>
+        <div class="project-number">
+            <h3>{{projectNumber}}/{{projectLength}}</h3>
         </div>
+        <div class="project-image">
+            <!-- <a href={{projectData.link}} target="_blank" rel="noopener noreferrer"></a> -->
+            <img src={{projectData.img}} alt="">
+        </div>
+        <div class="portfolio-outline"></div>
         <div class="project-info">
             <h2>{{projectData.projectName}}</h2>
             <span class="Over-400-23">{{projectData.headline}}</span>
             <span class="Over-400-16">{{projectData.description}}</span>
         </div>
     </div>
-    <div class="project-details">
+    <!-- <div class="project-details">
         <h3>{{projectNumber}}/{{projectLength}}</h3>
-    </div>
+    </div> -->
 </section>

@@ -7,26 +7,35 @@
     /* max-width: 1240px; */
 
     >div {
-        @include dFlex($direction: column);
         position: relative;
-        top: 0;
+        /* @include dFlex($direction: column); */
+        width: 100%;
+        /* top: 0; */
+        background-color: aquamarine;
     }
+}
+
+.project-number {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .project-image {
     position: relative;
     padding: 34px 0;
-    z-index: 10;
+    z-index: 2;
+    max-width: 620px;
 
     img {
         filter: grayscale(100%);
         width: 100%;
-        max-width: 620px;
-        max-height: 394px;
+        
+        /* max-height: 394px; */
 
-        &:hover {
+        /* &:hover {
             filter: none;
-        }
+        } */
     }
 
     &:hover {
@@ -34,22 +43,28 @@
             filter: none;
         }
 
-        .portfolio-outline {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            max-height: 394px;
-            outline: 4px solid black;
-            margin: 54px 0 0 20px;
-        }
+        
     }
 }
 
-.project-info {
+.portfolio-outline {
     position: absolute;
-    top: 50px;
-    left: 700px;
+    padding: 34px 0;
+    top: 0;
+    max-width: 620px;
+    width: 100%;
+    outline: 4px solid black;
+    margin: 20px 0 0 20px;
+}
+
+.project-info {
+    //extra classe für rechts links
+
+    bottom: 60px;
+    right: 0;
+
+    //
+    position: absolute;
     width: 100%;
     max-width: 475px;
     @include dFlex($direction: column);

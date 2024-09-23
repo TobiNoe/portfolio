@@ -21,7 +21,6 @@ export class PortfolioProjectComponent {
     const projectData = this.data.myProjects[num];
     this.projectNumber = '0' + (num + 1);
     this.projectData = projectData;
-
   }
 }
 
