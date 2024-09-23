@@ -66,6 +66,42 @@ export class DataServiceService {
     }
   ];
 
+  myProjects = [
+    {
+      img: "./../../../../../assets/img/portfolio/project.png",
+      link: "https://www.heise.de",
+      headline: [
+        "Javascript",
+        "Firebase",
+        "CSS",
+        "HTML"
+      ],
+      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    {
+      img: "./../../../../../assets/img/portfolio/project.png",
+      link: "https://www.heise.de",
+      headline: [
+        "Javascript",
+        "Firebase",
+        "CSS",
+        "HTML"
+      ],
+      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    {
+      img: "./../../../../../assets/img/portfolio/project.png",
+      link: "https://www.heise.de",
+      headline: [
+        "Javascript",
+        "Firebase",
+        "CSS",
+        "HTML"
+      ],
+      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    }
+  ]
+
   navbarImg = [
     "./../../../../../assets/img/navbar/burger_1.png",
     "./../../../../../assets/img/navbar/burger_2.png",
