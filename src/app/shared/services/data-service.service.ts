@@ -69,35 +69,23 @@ export class DataServiceService {
   myProjects = [
     {
       img: "./../../../../../assets/img/portfolio/project.png",
-      link: "https://www.heise.de",
-      headline: [
-        "Javascript",
-        "Firebase",
-        "CSS",
-        "HTML"
-      ],
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      link: "www.heise.de",
+      projectName: "Pokedex",
+      headline: "Javascript | CSS | HTML",
+      description: "Pokedex rules"
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
-      link: "https://www.heise.de",
-      headline: [
-        "Javascript",
-        "Firebase",
-        "CSS",
-        "HTML"
-      ],
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      link: "www.heise.de",
+      projectName: "El Pollo Loco",
+      headline: "Javascript | CSS | HTML",
+      description: "OOP Game programming"
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
-      link: "https://www.heise.de",
-      headline: [
-        "Javascript",
-        "Firebase",
-        "CSS",
-        "HTML"
-      ],
+      link: "www.heise.de",
+      projectName: "Join",
+      headline: "Javascript | Firebase | CSS | HTML",
       description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     }
   ]
