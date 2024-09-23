@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
+import { DataServiceService } from '../../shared/services/data-service.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,5 +10,5 @@ import { PortfolioProjectComponent } from './portfolio-project/portfolio-project
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  data = inject(DataServiceService);
 }

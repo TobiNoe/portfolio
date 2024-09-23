@@ -1,7 +1,7 @@
 <section class="portfolio" #portfolio id="portfolio">
     <h2>Portfolio</h2>
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
-    <app-portfolio-project class="project-width"/>
-    <app-portfolio-project class="project-width"/>
-    <app-portfolio-project class="project-width"/>
+    @for (item of data.myProjects; track $index) {
+        <app-portfolio-project class="project-width"/>
+    }
 </section>
