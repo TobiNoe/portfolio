@@ -107,7 +107,7 @@
 
     //
     position: absolute;
-    bottom: 60px;
+    bottom: 65px;
     width: 100%;
     max-width: 475px;
     @include dFlex($direction: column);
@@ -115,6 +115,29 @@
 
     h2 {
         font-size: 45px;
+    }
+}
+
+.project-button {
+    padding: 20px 0 0;
+
+    >a {
+        text-decoration: none;
+        color: $text-black;
+        padding: 20px 60px;
+        border: solid 4px $border-black;
+        background: transparent;
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 800;
+            padding: 20px 80px;
+            transition: padding 100ms ease-in-out;
+        }
+
+        &:active {
+            color: $text-secondery;
+        }
     }
 }
 
