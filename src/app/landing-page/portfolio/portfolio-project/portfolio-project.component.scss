@@ -29,11 +29,10 @@
                     >svg {
                         width: 72px;
                         rotate: -135deg;
-                        border-radius: 50%;
                         background: $bc-secondery;
                         transition:
-                            width 250ms 100ms linear,
-                            rotate 250ms 100ms linear;
+                            width 250ms 125ms linear,
+                            rotate 250ms 125ms linear;
                     }
                 }
             }
