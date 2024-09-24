@@ -3,15 +3,33 @@
 .project {
     @include dFlex($jc: space-between);
     color: $text-black;
-    /* width: 100%; */
-    /* max-width: 1240px; */
 
     >div {
+        @include dFlex();
         position: relative;
-        /* @include dFlex($direction: column); */
         width: 100%;
-        /* top: 0; */
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
+
+        >a {
+            color: $text-black;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0%);
+            }
+
+            .portfolio-outline {
+                outline: 4px solid $border-black;
+            }
+
+            .project-info-right {
+                right: 0;
+                transition: right 250ms linear;
+            }
+        }
     }
 }
 
@@ -22,49 +40,42 @@
 }
 
 .project-image {
+    
     position: relative;
     padding: 34px 0;
     z-index: 2;
-    max-width: 620px;
+    width: 100%;
 
     img {
         filter: grayscale(100%);
         width: 100%;
-        
-        /* max-height: 394px; */
-
-        /* &:hover {
-            filter: none;
-        } */
-    }
-
-    &:hover {
-        img {
-            filter: none;
-        }
-
-        
+        max-width: 620px;
     }
 }
 
 .portfolio-outline {
     position: absolute;
-    padding: 34px 0;
-    top: 0;
+    z-index: 3;
+    top: 34px;
     max-width: 620px;
+    aspect-ratio: 1 / 0.635;
     width: 100%;
-    outline: 4px solid black;
-    margin: 20px 0 0 20px;
+    outline: 4px solid transparent;
+}
+
+.portfolio-outline-right {
+    margin: 20px 0px 0 20px;
+    left: 0;
 }
 
 .project-info {
     //extra classe für rechts links
 
-    bottom: 60px;
-    right: 0;
+    right: 600px;
 
     //
     position: absolute;
+    bottom: 60px;
     width: 100%;
     max-width: 475px;
     @include dFlex($direction: column);
@@ -74,8 +85,6 @@
         font-size: 45px;
     }
 }
-
-
 
 .Over-400-23 {
     font-family: 'Overpass';
