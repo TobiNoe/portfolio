@@ -8,7 +8,7 @@
 
         >a {
             position: relative;
-            @include dFlex();
+            /* @include dFlex(); */
             color: $text-black;
             text-decoration: none;
             cursor: default;
@@ -43,6 +43,14 @@
         }
     }
 }
+
+.left {
+    @include dFlex();
+}
+
+.right {
+    @include dFlex($direction: row-reverse);
+} 
 
 .project-number {
     position: absolute;

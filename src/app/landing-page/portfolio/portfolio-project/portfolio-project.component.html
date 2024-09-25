@@ -1,6 +1,6 @@
 <section class="project">
     <div>
-        <a href="{{projectData.link}}" target="_blank">
+        <a href="{{projectData.link}}" target="_blank" [ngClass]="direction == 'left' ? 'left' : 'right'">
             <div class="project-number">
                 <h3>{{projectNumber}}/{{projectLength}}</h3>
             </div>

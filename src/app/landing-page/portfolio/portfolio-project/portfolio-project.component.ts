@@ -1,10 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
 import { DataServiceService } from '../../../shared/services/data-service.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio-project',
   standalone: true,
-  imports: [],
+  imports: [NgClass],
   templateUrl: './portfolio-project.component.html',
   styleUrl: './portfolio-project.component.scss'
 })
