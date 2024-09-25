@@ -10,6 +10,7 @@ import { DataServiceService } from '../../../shared/services/data-service.servic
 })
 export class PortfolioProjectComponent {
   @Input() project = '';
+  direction = '';
   data = inject(DataServiceService);
   projectData: any;
   projectNumber: string = '';
@@ -21,6 +22,16 @@ export class PortfolioProjectComponent {
     const projectData = this.data.myProjects[num];
     this.projectNumber = '0' + (num + 1);
     this.projectData = projectData;
+    this.direction = this.oddOrEven(num + 1);
+    console.log(this.direction);
+  }
+
+  oddOrEven(num:number) {
+    if (num % 2 !== 0) {
+      return 'left';
+    } else {
+      return 'right';
+    }
   }
 }
 
