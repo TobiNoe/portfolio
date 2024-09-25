@@ -1,19 +1,18 @@
 @import './../../../../styles.scss';
 
 .project {
-    @include dFlex($jc: space-between);
     color: $text-black;
 
     >div {
-        @include dFlex();
-        position: relative;
         width: 100%;
-        /* background-color: aquamarine; */
 
         >a {
+            position: relative;
+            @include dFlex();
             color: $text-black;
             text-decoration: none;
             cursor: default;
+            width: 100%;
         }
 
         &:hover {
@@ -38,7 +37,7 @@
             }
 
             .project-info-right {
-                right: 0;
+                right: 0px;
                 transition: right 250ms linear;
             }
         }
@@ -49,14 +48,17 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    >h3 {
+        font-size: clamp(23px, 3vw, 48px);
+    }
 }
 
 .project-image {
-
     position: relative;
     padding: 34px 0;
     z-index: 2;
-    width: 100%;
+    width: 50%;
 
     img {
         filter: grayscale(100%);
@@ -101,20 +103,23 @@
 }
 
 .project-info {
-    //extra classe für rechts links
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    @include dFlex($direction: column, $jc: center, $ai: end);
 
-    right: 600px;
 
-    //
-    position: absolute;
-    bottom: 65px;
-    width: 100%;
-    max-width: 475px;
-    @include dFlex($direction: column);
-    gap: 15px;
+    .project-info-right {
+        position: absolute;
+        right: 0px;
+        max-width: 475px;
+        padding-left: 70px;
+        @include dFlex($direction: column);
+        gap: 15px;
+    }
 
     h2 {
-        font-size: 45px;
+        font-size: clamp(32px, 3vw, 45px);
     }
 }
 
@@ -153,3 +158,7 @@
     font-weight: 400;
     font-size: 16px;
 }
+
+@media only screen and (max-width: 1000px) {}
+
+@media only screen and (max-width: 768px) {}

@@ -70,16 +70,16 @@ export class DataServiceService {
     {
       img: "./../../../../../assets/img/portfolio/project.png",
       link: "http://www.heise.de",
-      projectName: "Pokedex",
+      projectName: "Pokedex ",
       headline: "Javascript | CSS | HTML",
-      description: "Pokedex rules"
+      description: "Pokedex rules Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
       link: "http://www.bild.de",
       projectName: "El Pollo Loco",
       headline: "Javascript | CSS | HTML",
-      description: "OOP Game programming"
+      description: "OOP Game programming Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
