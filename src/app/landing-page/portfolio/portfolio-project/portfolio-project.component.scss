@@ -26,22 +26,11 @@
 
                     >svg {
                         width: 72px;
+                        rotate: -135deg;
                         background: $bc-secondery;
                         transition:
                             width 250ms 125ms linear,
                             rotate 250ms 125ms linear;
-                    }
-                }
-
-                .portfolio-arrow-left {
-                    >svg {
-                        rotate: 135deg;
-                    }
-                }
-
-                .portfolio-arrow-right {
-                    >svg {
-                        rotate: -135deg;
                     }
                 }
             }
@@ -65,7 +54,7 @@
 
 .right {
     @include dFlex($direction: row-reverse);
-} 
+}
 
 .project-number {
     position: absolute;
@@ -113,7 +102,7 @@
         aspect-ratio: 1 / 1;
         top: 40%;
         background-color: transparent;
-        
+
         >svg {
             width: 36px;
             height: auto;
@@ -196,7 +185,126 @@
 }
 
 @media only screen and (max-width: 1060px) {
+    .project {
+
+        >div {
+
+            &:hover {
+
+                .portfolio-outline {
+
+                    >div {
+
+                        >svg {
+                            width: 54px;
+                        }
+                    }
+                }
+
+                .project-info-right,
+                .project-info-left {
+                    top: 0px;
+                    transition: top 250ms linear;
+                }
+
+                .project-info-left {
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    .left,
+    .right {
+        @include dFlex($direction: column);
+    }
+
+    .project-info,
+    .project-image {
+        width: 100%;
+    }
+
+    .project-image-right {
+        @include dFlex($jc: end);
+        width: 100%;
+    }
+
+    .project-image-left {
+        width: 100%;
+    }
+
+    .project-info {
+        height: 300px;
+        @include dFlex($direction: column, $jc: start, $ai: start);
+
+
+        >div {
+            max-width: 100%;
+        }
+
+        .project-info-right,
+        .project-info-left {
+            width: 100%;
+            max-width: 620px;
+            top: -300px;
+        }
+
+        .project-info-right {
+            left: 0;
+            padding-left: 0;
+        }
+
+        .project-info-left {
+            right: 0;
+            padding-right: 0;
+            text-align: end;
+        }
+
+        h2 {
+            font-size: clamp(32px, 3vw, 45px);
+        }
+    }
 
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+
+    .project {
+
+        >div {
+
+            &:hover {
+
+                .portfolio-outline {
+
+                    >div {
+
+                        >svg {
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio-outline {
+
+        >div {
+
+            >svg {
+                width: 24px;
+            }
+        }
+    }
+
+    .portfolio-outline-right {
+        margin: 0px 0px 0 0px;
+        left: 0;
+    }
+
+    .portfolio-outline-left {
+        margin: 0px 0px 0 0;
+        right: 0;
+    }
+}

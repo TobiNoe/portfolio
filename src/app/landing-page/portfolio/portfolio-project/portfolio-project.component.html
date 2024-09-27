@@ -5,7 +5,7 @@
                 <h3>{{projectNumber}}/{{projectLength}}</h3>
             </div>
 
-            <div class="project-image">
+            <div class="project-image" [ngClass]="direction == 'left' ? 'project-image-left' : 'project-image-right'">
                 <img src={{projectData.img}} alt="">
 
                 <div class="portfolio-outline" [ngClass]="direction == 'left' ? 'portfolio-outline-right' : 'portfolio-outline-left'">
