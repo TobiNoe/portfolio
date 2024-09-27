@@ -8,7 +8,6 @@
 
         >a {
             position: relative;
-            /* @include dFlex(); */
             color: $text-black;
             text-decoration: none;
             cursor: default;
@@ -27,11 +26,22 @@
 
                     >svg {
                         width: 72px;
-                        rotate: -135deg;
                         background: $bc-secondery;
                         transition:
                             width 250ms 125ms linear,
                             rotate 250ms 125ms linear;
+                    }
+                }
+
+                .portfolio-arrow-left {
+                    >svg {
+                        rotate: 135deg;
+                    }
+                }
+
+                .portfolio-arrow-right {
+                    >svg {
+                        rotate: -135deg;
                     }
                 }
             }
@@ -39,6 +49,11 @@
             .project-info-right {
                 right: 0px;
                 transition: right 250ms linear;
+            }
+
+            .project-info-left {
+                left: 0px;
+                transition: left 250ms linear;
             }
         }
     }
@@ -55,11 +70,18 @@
 .project-number {
     position: absolute;
     top: 0;
-    right: 0;
 
     >h3 {
         font-size: clamp(23px, 3vw, 48px);
     }
+}
+
+.project-number-left {
+    left: 0;
+}
+
+.project-number-right {
+    right: 0;
 }
 
 .project-image {
@@ -89,11 +111,9 @@
         width: 72px;
         @include dFlex($ai: center, $jc: center);
         aspect-ratio: 1 / 1;
-        right: 0;
         top: 40%;
         background-color: transparent;
-        margin-right: -39px;
-
+        
         >svg {
             width: 36px;
             height: auto;
@@ -103,11 +123,24 @@
             padding: 6px;
         }
     }
+
+    .portfolio-arrow-right {
+        right: -38px;
+    }
+
+    .portfolio-arrow-left {
+        left: -38px;
+    }
 }
 
 .portfolio-outline-right {
     margin: 20px 0px 0 20px;
     left: 0;
+}
+
+.portfolio-outline-left {
+    margin: 20px 20px 0 0;
+    right: 0;
 }
 
 .project-info {
@@ -117,13 +150,21 @@
     @include dFlex($direction: column, $jc: center, $ai: end);
 
 
-    .project-info-right {
+    >div {
         position: absolute;
-        right: 0px;
         max-width: 475px;
-        padding-left: 70px;
         @include dFlex($direction: column);
         gap: 15px;
+    }
+
+    .project-info-right {
+        right: 800px;
+        padding-left: 70px;
+    }
+
+    .project-info-left {
+        left: 800px;
+        padding-right: 70px;
     }
 
     h2 {
@@ -154,19 +195,8 @@
     }
 }
 
-.Over-400-23 {
-    font-family: 'Overpass';
-    font-weight: 400;
-    font-size: 23px;
-    color: $text-secondery;
-}
+@media only screen and (max-width: 1060px) {
 
-.Over-400-16 {
-    font-family: 'Overpass';
-    font-weight: 400;
-    font-size: 16px;
 }
-
-@media only screen and (max-width: 1000px) {}
 
 @media only screen and (max-width: 768px) {}
