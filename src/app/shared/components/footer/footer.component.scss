@@ -24,6 +24,10 @@
 
     .form-div {
         @include dFlex($direction: column, $ai: center);
+
+        >p {
+            padding-bottom: 22px;
+        }
     }
 
     h2 {
@@ -39,11 +43,6 @@
     h4 {
         color: $text-secondery;
         padding: 18px 0;
-    }
-
-    //TODO: do not function!!!
-    >p {
-        padding-bottom: 22px;
     }
 }
 
@@ -326,8 +325,14 @@ form {
         padding: 0 25px;
 
         h4,
-        p {
+        .form-div > p {
             text-align: center;
+        }
+    }
+
+    form {
+        .btn {
+            padding: 20px;
         }
     }
 
