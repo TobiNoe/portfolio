@@ -19,8 +19,7 @@
     scroll-margin-top: 96px;
     background: $bc-secondery;
     color: $text-primary;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0 100px;
 
 
     .form-div {
@@ -42,6 +41,7 @@
         padding: 18px 0;
     }
 
+    //TODO: do not function!!!
     >p {
         padding-bottom: 22px;
     }
@@ -299,5 +299,41 @@ form {
         &:hover {
             font-weight: bold;
         }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    form {
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    .footer {
+        padding: 0 50px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 0 25px;
+
+        h4,
+        p {
+            text-align: center;
+        }
+    }
+
+    .info {
+        height: 90px;
+        gap: 16px;
+        flex-direction: column-reverse;
     }
 }
