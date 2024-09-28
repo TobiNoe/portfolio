@@ -39,6 +39,10 @@
 
 @media only screen and (max-width: 768px) {
     .portfolio {
-        padding: 0 25px 60px;
+        padding: 0 25px 24px;
+
+        app-portfolio-project {
+            padding-bottom: 40px;
+        }
     }
 }
