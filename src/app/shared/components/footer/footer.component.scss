@@ -288,7 +288,6 @@ form {
             cursor: pointer;
         }
     }
-
 }
 
 .info {
@@ -354,6 +353,13 @@ form {
     form {
         .btn {
             padding: 20px 10px;
+        }
+    }
+
+    .top-navigation {
+            
+        >img {
+            display: none;
         }
     }
 
