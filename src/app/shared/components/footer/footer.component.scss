@@ -275,8 +275,6 @@ form {
     right: 0;
     bottom: 88px;
     height: 88px;
-    /* width: 54px; */
-    /* background-color: aqua !important; */
 
     >img {
         position: absolute;
@@ -295,7 +293,7 @@ form {
 
 .info {
     @include dFlex($ai: center, $jc: space-between);
-    margin-top: 34px;
+    margin-top: -24px;
     height: 69px;
 }
 

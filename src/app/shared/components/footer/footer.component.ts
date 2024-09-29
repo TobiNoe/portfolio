@@ -36,4 +36,8 @@ export class FooterComponent {
     }
   }
 
+  scrollTop() {
+    window.scroll({top: 0})
+  }
+
 }
