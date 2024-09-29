@@ -31,7 +31,7 @@ export class FooterComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) {
+    if (ngForm.valid && ngForm.submitted && this.policyChecked) {
       console.log(this.contactData);
     }
   }

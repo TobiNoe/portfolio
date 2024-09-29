@@ -261,6 +261,10 @@ form {
     .btn-submit {
         color: $text-primary;
         border: 4px solid $text-primary;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -325,7 +329,7 @@ form {
         padding: 0 25px;
 
         h4,
-        .form-div > p {
+        .form-div>p {
             text-align: center;
         }
     }
@@ -340,5 +344,9 @@ form {
         height: 90px;
         gap: 16px;
         flex-direction: column-reverse;
+    }
+
+    .legal-notice {
+        @include dFlex($ai: center, $jc: center);
     }
 }

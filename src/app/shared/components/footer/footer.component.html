@@ -88,7 +88,8 @@
                 <p>I've read the <a href="http://" target="_blank" rel="noopener noreferrer">privacy policy</a> and
                     agree to the processing of my data as outlined.</p>
             </div>
-            <span class="validation-text validation-policy">Please accept the privacy policy.</span>
+            <span class="validation-text validation-policy" [ngClass]="policyChecked ? 'd-none' : '' ">Please accept the
+                privacy policy.</span>
 
             <div class="btn-center">
                 @if (contactForm.valid && policyChecked) {
@@ -97,7 +98,6 @@
                 <input class="btn-no-submit btn" type="submit" value="Send message">
                 }
             </div>
-
         </form>
     </div>
     <div class="top-navigation">
