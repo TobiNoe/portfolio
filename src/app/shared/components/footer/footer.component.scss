@@ -310,13 +310,29 @@ form {
         text-decoration: none;
         color: $text-primary;
         cursor: pointer;
-    }
+        min-width: 94px;
 
-    p {
-        font-size: 16px;
+        >p {
+            position: relative;
+            font-size: 16px;
 
-        &:hover {
-            font-weight: bold;
+            &:hover {
+                font-weight: bold;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                border-bottom: 2px solid $text-secondery;
+            }
+
+            &:hover::before {
+                width: 60%;
+                left: 40%;
+                transition: all 100ms ease-out;
+            }
         }
     }
 }
@@ -357,7 +373,7 @@ form {
     }
 
     .top-navigation {
-            
+
         >img {
             display: none;
         }
