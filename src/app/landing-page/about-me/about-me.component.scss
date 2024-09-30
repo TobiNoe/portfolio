@@ -109,7 +109,7 @@
         }
 
         .about-me-outline {
-            margin: 15px 0 0 15px;
+            margin: 15px 0 0 30px;
         }
     }
 }
@@ -127,13 +127,14 @@
 
     .about-me-img {
 
-        >img {
+        /* >img {
             min-width: 390px;
-        }
+        } */
 
         .about-me-outline {
-            margin: 10px 0 0 10px;
-            min-width: 390px;
+            margin: 0;
+            /* margin: 10px 0 0 10px; */
+            /* min-width: 390px; */
         }
     }
 }
