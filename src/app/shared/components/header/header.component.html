@@ -1,6 +1,6 @@
 <div class="navbar" [ngClass]="menuIsToggled ? 'menu-show-height' : ''">
     <div class="nav-headline">
-        <div class="navbar-logo">Logo einfügen</div>
+        <div class="navbar-logo"><h3 ngNonBindable>{{TN}}</h3></div>
         <div (click)="toggleMenu()" class="navbar-hmenu">
             <img [src]="hmenuImg" alt="hamburger-menu">
         </div>
