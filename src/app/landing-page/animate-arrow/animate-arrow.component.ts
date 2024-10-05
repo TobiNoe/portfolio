@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, ElementRef, Input, AfterViewInit, Renderer2, HostListener } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-animate-arrow',
@@ -25,37 +25,48 @@ export class AnimateArrowComponent {
   onWindowScroll() {
     const container = this.el.nativeElement.querySelector('.arrow-animation');
     const containerRect = container.getBoundingClientRect();
-
-    // Prüfen, ob der Container 100% im Viewport ist
-    if (containerRect.top >= 0 && containerRect.bottom <= window.innerHeight) {
-      if (!this.containerInView) {
-        // Setze die Anfangsposition für den Scrollwert
-        this.initialScrollTop = window.scrollY;
-        this.containerInView = true;
-      }
-
+  
+    // Überprüfen, ob der Container 100% im Viewport ist
+    if (this.checkContainerInView(containerRect)) {
       const scrollDifference = window.scrollY - this.initialScrollTop;
-
-      // Wenn 50px weiter gescrollt wurde, SVG wechseln und Klasse 'bottom' hinzufügen
+  
+      // Scroll-Logik für herunter oder hoch scrollen
       if (scrollDifference >= this.scrollThreshold && !this.scrolledEnough) {
-        this.isLongArrow = true;
-        setTimeout(() => {
-          this.isLongArrow = false;
-        }, 200);
-        this.scrolledEnough = true;
-        this.renderer.addClass(container, 'bottom');
-      }
-      // Wenn wieder weniger als 50px gescrollt wird, das alte SVG anzeigen
-      else if (scrollDifference < this.scrollThreshold && this.scrolledEnough) {
-        this.isLongArrow = true;
-        setTimeout(() => {
-          this.isLongArrow = false;
-        }, 200);
-        this.scrolledEnough = false;
-        this.renderer.removeClass(container, 'bottom');
+        this.handleScrollDown(container);
+      } else if (scrollDifference < this.scrollThreshold && this.scrolledEnough) {
+        this.handleScrollUp(container);
       }
     } else {
       this.containerInView = false;
     }
+  }
+  
+  checkContainerInView(containerRect: DOMRect): boolean {
+    if (containerRect.top >= 0 && containerRect.bottom <= window.innerHeight) {
+      if (!this.containerInView) {
+        this.initialScrollTop = window.scrollY;
+        this.containerInView = true;
+      }
+      return true;
+    }
+    return false;
+  }
+  
+  handleScrollDown(container: HTMLElement): void {
+    this.isLongArrow = true;
+    setTimeout(() => {
+      this.isLongArrow = false;
+    }, 200);
+    this.scrolledEnough = true;
+    this.renderer.addClass(container, 'bottom');
+  }
+  
+  handleScrollUp(container: HTMLElement): void {
+    this.isLongArrow = true;
+    setTimeout(() => {
+      this.isLongArrow = false;
+    }, 200);
+    this.scrolledEnough = false;
+    this.renderer.removeClass(container, 'bottom');
   }
 }
