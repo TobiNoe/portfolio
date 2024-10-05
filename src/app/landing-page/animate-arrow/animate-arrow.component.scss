@@ -29,3 +29,15 @@
 .bottom {
     @include dFlex($ai: end, $jc: start);
 }
+
+@media only screen and (max-width: 960px) {
+    .arrow-position {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .arrow-position {
+        padding: 0 25px;
+    }
+}
