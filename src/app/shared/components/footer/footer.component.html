@@ -4,7 +4,7 @@
     <div class="form-div">
         <h4>Want to discuss a new project?</h4>
         <p>Say hello! let's discuss your ideas and make it happen</p>
-        <form (submit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
             <div class="input-label" [ngClass]="contactData.name == '' ? 'input-label-empty' : 'input-label-filled'">
                 <input [(ngModel)]="contactData.name" #name="ngModel"
