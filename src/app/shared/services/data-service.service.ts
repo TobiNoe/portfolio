@@ -69,7 +69,7 @@ export class DataServiceService {
   myProjects = [
     {
       img: "./../../../../../assets/img/portfolio/project.png",
-      link: "http://www.heise.de",
+      link: "https://pokedex.tobias-noelle.de/",
       gitHubLink: "https://github.com/TobiNoe/pokedex",
       projectName: "Pokedex ",
       headline: "Javascript | CSS | HTML",
@@ -77,7 +77,7 @@ export class DataServiceService {
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
-      link: "http://www.bild.de",
+      link: "https://elpolloloco.tobias-noelle.de/",
       gitHubLink: "https://github.com/TobiNoe/PolloLoco",
       projectName: "El Pollo Loco",
       headline: "Javascript | CSS | HTML",
@@ -85,7 +85,7 @@ export class DataServiceService {
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
-      link: "http://www.welt.de",
+      link: "https://join.tobias-noelle.de/",
       gitHubLink: "https://github.com/TobiNoe/Join-Portfolio",
       projectName: "Join",
       headline: "Javascript | Firebase | CSS | HTML",
