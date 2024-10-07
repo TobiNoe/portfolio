@@ -1,7 +1,23 @@
+@import './../../styles.scss';
+
 .legal-notice {
     height: calc(100svh - 96px);
     background: #FFFCF3;
     overflow-y: scroll;
     hyphens: auto;
     padding: 25px 100px;
+
+    a {
+        color: $text-black;
+
+        &:hover {
+            color: $text-secondery;
+            transition: color 50ms linear;
+            cursor: pointer;
+        }
+
+        &:visited {
+            text-decoration: none;
+        }
+    }
 }
