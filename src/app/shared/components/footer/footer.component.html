@@ -85,7 +85,7 @@
                     </label>
                 </div>
 
-                <p>I've read the <a routerLink="/legal">privacy policy</a> and
+                <p>I've read the <a (click)="scrollTop()" routerLink="/legal">privacy policy</a> and
                     agree to the processing of my data as outlined.</p>
             </div>
             <span class="validation-text validation-policy" [ngClass]="policyChecked ? 'd-none' : '' ">Please accept the
@@ -122,7 +122,7 @@
         </div>
     </div>
     <div class="legal-notice">
-        <a routerLink="/legal">
+        <a (click)="scrollTop()" routerLink="/legal">
             <p>Legal notice</p>
         </a>
     </div>
