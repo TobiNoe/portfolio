@@ -17,3 +17,15 @@
         }
     }
 }
+
+@media only screen and (max-width: 960px) {
+    .legal-notice {
+        padding: 25px 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .legal-notice {
+        padding: 25px 25px;
+    }
+}
