@@ -1,8 +1,26 @@
 {
+    "navigation": {
+        "first": "Developer"
+    },
     "hero": {
         "roll": "Developer"
     },
     "aboutMe": {
-
+        "first": "Developer"
+    },
+    "mySkills": {
+        "first": "Developer"
+    },
+    "portfolio": {
+        "first": "Developer"
+    },
+    "references": {
+        "first": "Developer"
+    },
+    "footer": {
+        "first": "Developer"
+    },
+    "legalNotice": {
+        "first": "Developer"
     }
 }
