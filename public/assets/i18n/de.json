@@ -8,7 +8,12 @@
         "roll": "Entwickler"
     },
     "aboutMe": {
-        "first": "Developer"
+        "headline": "Über mich",
+        "description1": "Ich bin ein Junior Frontend-Entwickler aus Dortmund, technologiebegeistert und immer bereit, neue Fähigkeiten zu erlernen. Aktuell suche ich eine Festanstellung, um mich in einem kreativen Umfeld weiterzuentwickeln und neue Herausforderungen anzugehen.",
+        "description2": "Wenn du nach einem engagierten Entwickler mit hoher Lernbereitschaft suchst, freue ich mich auf deine Nachricht!",
+        "based": "Wohnhaft in Dortmund",
+        "officeStatus": "Offen für Büro-, Hybride und Remote-Arbeit.",
+        "button": "Kontaktiere mich"
     },
     "mySkills": {
         "first": "Developer"

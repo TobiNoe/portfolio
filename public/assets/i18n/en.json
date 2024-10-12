@@ -8,7 +8,12 @@
         "roll": "Developer"
     },
     "aboutMe": {
-        "first": "Developer"
+        "headline": "About me",
+        "description1": "I am a junior Frontend developer from Dortmund, passionate about technology and always eager to learn new skills. I am currently looking for a full-time position to grow in a creative environment and take on new challenges.",
+        "description2": "If you are looking for a dedicated developer with a strong willingness to learn, I would be happy to hear from you!",
+        "based": "Based in Dortmund",
+        "officeStatus": "Open to in-office, hybrid, and remote work.",
+        "button": "Let's talk"
     },
     "mySkills": {
         "first": "Developer"
