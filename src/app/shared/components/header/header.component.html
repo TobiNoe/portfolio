@@ -11,13 +11,13 @@
     </div>
     <div class="navbar-menu" [ngClass]="menuIsToggled ? 'menu-show' : 'menu-hide'">
         <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')">
-            <h2 class="syne-700-45-96">About me</h2>
+            <h2 class="syne-700-45-96">{{'header.menu1' | translate}}</h2>
         </a>
         <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#mySkills')">
-            <h2 class="syne-700-45-96">My skills</h2>
+            <h2 class="syne-700-45-96">{{'header.menu2' | translate}}</h2>
         </a>
         <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#portfolio')">
-            <h2 class="syne-700-45-96">Portfolio</h2>
+            <h2 class="syne-700-45-96">{{'header.menu3' | translate}}</h2>
         </a>
         <div class="placeholder-navbar"></div>
     </div>

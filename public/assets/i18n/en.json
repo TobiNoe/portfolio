@@ -1,6 +1,8 @@
 {
     "header": {
-        "first": "Developer"
+        "menu1": "About me",
+        "menu2": "My skills",
+        "menu3": "Portfolio"
     },
     "hero": {
         "roll": "Developer"
