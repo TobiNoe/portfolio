@@ -24,14 +24,30 @@
     "portfolio": {
         "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
     },
-    "portfolioProject": 
-        [
-            {"description": "Ein Programm, das Daten aus einer API zu Pokémon abruft und diese als Kartendeck darstellt. Enthält eine Suchfunktion zur einfachen Navigation und Auffindung von Pokémon."},
-            {"description": "Jump-and-Run-Spiel: Ein Spiel, das mit objektorientierter Programmierung entwickelt wurde. besiege Gegner auf dem weg zum Endboss und sammle dabei Gegenstände."},
-            {"description": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Benutzer und Kategorien zuweisen."}
+    "portfolioProject": [
+        {
+            "description": "Ein Programm, das Daten aus einer API zu Pokémon abruft und diese als Kartendeck darstellt. Enthält eine Suchfunktion zur einfachen Navigation und Auffindung von Pokémon."
+        },
+        {
+            "description": "Jump-and-Run-Spiel: Ein Spiel, das mit objektorientierter Programmierung entwickelt wurde. besiege Gegner auf dem weg zum Endboss und sammle dabei Gegenstände."
+        },
+        {
+            "description": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Benutzer und Kategorien zuweisen."
+        }
     ],
     "references": {
-        "first": "Developer"
+        "description": "Ich arbeite sowohl selbstständig als auch im Team sehr gut. Hier ist, was meine Kollegen über die Zusammenarbeit mit mir sagen.",
+        "reference": [
+            {
+                "statement": "Tobias ist ein inspirierender Kommilitone bei der DA. Seine motivierende Art steckt einen an und reißt einen mit sich.Dazu kommt noch die Eigenschaft das Interesse zu entwickeln, sich mit Problemen jenseits seines Tellerrands zu beschäftigen."
+            },
+            {
+                "statement": "deutsch"
+            },
+            {
+                "statement": "Tobias habe ich während der Weiterbildung zum Fullstack-Entwickler kennengelernt. Seine Leidenschaft und seine offene Art haben mich sehr begeistert, und daraus entwickelte sich ein regelmäßiger Austausch. Für Tobias gibt es kein Hindernis, sondern die Frage: Wie gehen wir es an, um eine Lösung zu entwickeln? Kurz gesagt – ein smarter Typ, den man gerne um sich hat."
+            }
+        ]
     },
     "footer": {
         "first": "Developer"

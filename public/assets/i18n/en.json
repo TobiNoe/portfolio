@@ -24,14 +24,30 @@
     "portfolio": {
         "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
     },
-    "portfolioProject": 
-        [
-            {"description": "Program that retrieves data about Pokémon from an API and presents it as a card deck. Includes a search function for easy navigation and finding Pokémon."},
-            {"description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way."},
-            {"description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."}
+    "portfolioProject": [
+        {
+            "description": "Program that retrieves data about Pokémon from an API and presents it as a card deck. Includes a search function for easy navigation and finding Pokémon."
+        },
+        {
+            "description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way."
+        },
+        {
+            "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+        }
     ],
     "references": {
-        "first": "Developer"
+        "description": "I thrive both independently and as part of a team. Here’s what my colleagues have to say about working with me.",
+        "reference": [
+            {
+                "statement": "Tobias ist ein inspirierender Kommilitone bei der DA. Seine motivierende Art steckt einen an und reißt einen mit sich.Dazu kommt noch die Eigenschaft das Interesse zu entwickeln, sich mit Problemen jenseits seines Tellerrands zu beschäftigen."
+            },
+            {
+                "statement": "english"
+            },
+            {
+                "statement": "Tobias habe ich während der Weiterbildung zum Fullstack-Entwickler kennengelernt. Seine Leidenschaft und seine offene Art haben mich sehr begeistert, und daraus entwickelte sich ein regelmäßiger Austausch. Für Tobias gibt es kein Hindernis, sondern die Frage: Wie gehen wir es an, um eine Lösung zu entwickeln? Kurz gesagt – ein smarter Typ, den man gerne um sich hat."
+            }
+        ]
     },
     "footer": {
         "first": "Developer"

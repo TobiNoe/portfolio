@@ -1,7 +1,6 @@
 <div class="references">
     <h2>References</h2>
-    <p>I thrive both independently and as part of a team. Here’s what my colleagues have to say about working with me.
-    </p>
+    <p>{{'references.description' | translate}}</p>
     <div class="references-div">
 
         @for (reference of data.myReferences; track $index) {
@@ -20,7 +19,7 @@
                 </p>
             </div>
             <p>
-                {{reference.reference}}
+                {{'references.reference.' + $index + '.statement' | translate}}
             </p>
         </div>
         }
