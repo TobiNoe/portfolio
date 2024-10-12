@@ -24,6 +24,12 @@
     "portfolio": {
         "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
     },
+    "portfolioProject": 
+        [
+            {"description": "Program that retrieves data about Pokémon from an API and presents it as a card deck. Includes a search function for easy navigation and finding Pokémon."},
+            {"description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way."},
+            {"description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."}
+    ],
     "references": {
         "first": "Developer"
     },

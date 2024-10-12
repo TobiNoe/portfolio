@@ -73,7 +73,7 @@ export class DataServiceService {
       gitHubLink: "https://github.com/TobiNoe/pokedex",
       projectName: "Pokedex ",
       headline: "Javascript | CSS | HTML",
-      description: "Pokedex rules Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      description: "" /* to input into de.json ans en.json */
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
@@ -81,7 +81,7 @@ export class DataServiceService {
       gitHubLink: "https://github.com/TobiNoe/PolloLoco",
       projectName: "El Pollo Loco",
       headline: "Javascript | CSS | HTML",
-      description: "OOP Game programming Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      description: "" /* to input into de.json ans en.json */
     },
     {
       img: "./../../../../../assets/img/portfolio/project.png",
@@ -89,7 +89,7 @@ export class DataServiceService {
       gitHubLink: "https://github.com/TobiNoe/Join-Portfolio",
       projectName: "Join",
       headline: "Javascript | Firebase | CSS | HTML",
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      description: "" /* to input into de.json ans en.json */
     }
   ]
 

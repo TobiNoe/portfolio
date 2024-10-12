@@ -1,14 +1,16 @@
 <section class="project">
     <div>
         <a href="{{projectData.link}}" target="_blank" [ngClass]="direction == 'left' ? 'left' : 'right'">
-            <div class="project-number" [ngClass]="direction == 'left' ? 'project-number-right' : 'project-number-left'">
+            <div class="project-number"
+                [ngClass]="direction == 'left' ? 'project-number-right' : 'project-number-left'">
                 <h3>{{projectNumber}}/{{projectLength}}</h3>
             </div>
 
             <div class="project-image" [ngClass]="direction == 'left' ? 'project-image-left' : 'project-image-right'">
                 <img src={{projectData.img}} alt="">
 
-                <div class="portfolio-outline" [ngClass]="direction == 'left' ? 'portfolio-outline-right' : 'portfolio-outline-left'">
+                <div class="portfolio-outline"
+                    [ngClass]="direction == 'left' ? 'portfolio-outline-right' : 'portfolio-outline-left'">
                     <div [ngClass]="direction == 'left' ? 'portfolio-arrow-right' : 'portfolio-arrow-left'">
                         <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.7031 36.1072L18.4641 0.0148538" stroke="#FFFCF3" stroke-width="2" />
@@ -23,7 +25,7 @@
                 <div [ngClass]="direction == 'left' ? 'project-info-right' : 'project-info-left'">
                     <h2>{{projectData.projectName}}</h2>
                     <span class="Over-400-23">{{projectData.headline}}</span>
-                    <span class="Over-400-16">{{projectData.description}}</span>
+                    <span class="Over-400-16">{{'portfolioProject.' + num + '.description' | translate}}</span>
                     <div class="project-button Over-400-23">
                         <a href="{{projectData.gitHubLink}}" target="_blank">Github</a>
                     </div>
