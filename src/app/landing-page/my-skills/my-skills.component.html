@@ -1,15 +1,12 @@
 <div class="my-skills" #mySkills id="mySkills">
     <div class="placeholder">
-        <h2 class="my-skills-headline">My skills</h2>
+        <h2 class="my-skills-headline">{{'mySkills.headline'|translate}}</h2>
     </div>
 
     <div class="my-skills-collection">
         <div class="my-skills-icons">
             @for (skill of data.mySkills; let i = $index; track $index) {
             <div class="my-skills-skill">
-                <!--  <div>  [ngStyle]="{'max-width.px': imageWidths[i] || 'auto'}" 
-                <img [src]="skill.img" alt="" (load)="onImageLoad(i, $event)">
-            </div> -->
                 <img [src]="skill.img" alt="">
                 <p>{{skill.name}}</p>
             </div>
@@ -40,8 +37,8 @@
                 </svg>
             </div>
             <div>
-                <p>Don’t see the skill you need?</p> <a href="#footer">Contact me</a>
-                <p>I’m always ready to learn!</p>
+                <p>{{'mySkills.description1'|translate}}</p> <a href="#footer">{{'mySkills.link'|translate}}</a>
+                <p>{{'mySkills.description2'|translate}}</p>
             </div>
 
         </div>

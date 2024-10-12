@@ -16,7 +16,10 @@
         "button": "Kontaktiere mich"
     },
     "mySkills": {
-        "first": "Developer"
+        "headline": "My skills",
+        "description1": "Fehlende benötigte Fähigkeit?",
+        "link": "Kontaktiere mich",
+        "description2": "Ich bin immer lernbereit!"
     },
     "portfolio": {
         "first": "Developer"
