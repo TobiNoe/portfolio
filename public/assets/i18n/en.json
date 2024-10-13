@@ -50,7 +50,21 @@
         ]
     },
     "footer": {
-        "first": "Developer"
+        "headline": "Say Hi!",
+        "formHeadline": "Want to discuss a new project?",
+        "formSlogan": "Say hello! let's discuss your ideas and make it happen",
+        "formName": "Your name",
+        "formNameValid": "Your name is required",
+        "formMail": "Your email",
+        "formMailValid": "Your email is required",
+        "formMessage": "Your message",
+        "formMessageValid": "Your message is required (min 4 character)",
+        "formPrivacyPolicy1": "I've read the ",
+        "formPrivacyPolicy2": "privacy policy",
+        "formPrivacyPolicy3": " and agree to the processing of my data as outlined.",
+        "formPrivacyPolicyValid": "Please accept the privacy policy.",
+        "formButton": "Send message",
+        "formLegalNotice": "Legal notice"
     },
     "legalNotice": {
         "first": "Developer"

@@ -11,5 +11,4 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ReferencesComponent {
   data = inject(DataServiceService);
-
 }

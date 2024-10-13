@@ -50,7 +50,21 @@
         ]
     },
     "footer": {
-        "first": "Developer"
+        "headline": "Sag Hallo!",
+        "formHeadline": "Möchten Sie ein neues Projekt besprechen?",
+        "formSlogan": "Sagen Sie Hallo! Lassen Sie uns Ihre Ideen besprechen und sie umsetzen",
+        "formName": "Ihr Name",
+        "formNameValid": "Ihr Name ist erforderlich",
+        "formMail": "Ihre E-Mail",
+        "formMailValid": "Ihre E-Mail ist erforderlich",
+        "formMessage": "Ihre Nachricht",
+        "formMessageValid": "Ihre Nachricht ist erforderlich (mind. 4 Zeichen)",
+        "formPrivacyPolicy1": "Ich habe die ",
+        "formPrivacyPolicy2": "Datenschutzerklärung",
+        "formPrivacyPolicy3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "formPrivacyPolicyValid": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+        "formButton": "Nachricht senden",
+        "formLegalNotice": "Impressum"
     },
     "legalNotice": {
         "first": "Developer"
