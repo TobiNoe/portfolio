@@ -55,9 +55,9 @@ export class DataServiceService {
       reference: "Tobias ist ein inspirierender Kommilitone bei der DA. Seine motivierende Art steckt einen an und reißt einen mit sich.Dazu kommt noch die Eigenschaft das Interesse zu entwickeln, sich mit Problemen jenseits seines Tellerrands zu beschäftigen."
     },
     {
-      name: "M.Nölle",
+      name: "O. Huber",
       position: "Team Partner",
-      reference: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment. Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+      reference: "Tobias erledigt seine Aufgaben stets zuverlässig, kommuniziert klar und effektiv im Team und erarbeitet durchdachte Lösungen. Seine motivierende Art steckt andere an und sorgt für eine positive Arbeitsatmosphäre."
     },
     {
       name: "S. Stuber",
