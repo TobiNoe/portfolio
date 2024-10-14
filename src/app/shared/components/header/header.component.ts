@@ -1,8 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DataServiceService } from '../../services/data-service.service';
 import { NgClass } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,18 +15,18 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class HeaderComponent {
   data = inject(DataServiceService);
   private translationService = inject(TranslateService);
-  /* @Output() openCloseEvent = new EventEmitter<boolean>(); */
+  @ViewChild('enButton') enButton!: ElementRef; // Zugriff auf den EN-Button
   hmenuImg: string = this.data.navbarImg[0];
   menuIsToggled: boolean = false;
 
   toggleMenu() {
     if (!this.menuIsToggled) {
       this.renderImgForward();
+      this.focusLanguage();
     } else {
-      this.renderImgBachward();
+      this.renderImgBackward();
     }
     this.menuIsToggled = !this.menuIsToggled;
-    /* this.openCloseEvent.emit(!this.menuIsToggled); */
   }
 
   renderImgForward() {
@@ -37,7 +38,7 @@ export class HeaderComponent {
     }
   }
 
-  renderImgBachward(){
+  renderImgBackward(){
     for (let index = 4; index >= 0; index--) {
       const img = this.data.navbarImg[index];
       setTimeout(() => {
@@ -56,5 +57,11 @@ export class HeaderComponent {
 
   changeLaguage(lang: string) {
     this.translationService.use(lang);
+  }
+
+  focusLanguage() {
+    setTimeout(() => {
+      this.enButton.nativeElement.focus();
+    }, 25);
   }
 }

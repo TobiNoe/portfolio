@@ -1,15 +1,16 @@
 <div class="navbar" [ngClass]="menuIsToggled ? 'menu-show-height' : ''">
     <div class="nav-headline">
         <div class="navbar-logo"><h4 ngNonBindable>{{TN}}</h4></div>
-        <div>
-            <button (click)="changeLaguage('de')">DE</button>
-            <button (click)="changeLaguage('en')">EN</button>
-        </div>
         <div (click)="toggleMenu()" class="navbar-hmenu">
             <img [src]="hmenuImg" alt="hamburger-menu">
         </div>
     </div>
     <div class="navbar-menu" [ngClass]="menuIsToggled ? 'menu-show' : 'menu-hide'">
+        <div class="button-div">
+            <button #enButton (click)="changeLaguage('en')"><p>EN</p></button>
+            <span>---</span>
+            <button (click)="changeLaguage('de')"><p>DE</p></button>
+        </div>
         <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')">
             <h2 class="syne-700-45-96">{{'header.menu1' | translate}}</h2>
         </a>

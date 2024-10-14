@@ -12,6 +12,36 @@
     }
 }
 
+button {
+    background: $bc-primary;
+    height: 36px;
+    width: 50px;
+    border: none;
+    color: $text-black;
+
+    &:hover {
+        cursor: pointer;
+        border: solid 2px $text-secondery;
+    }
+
+    &:focus {
+        color: $text-secondery;
+        border: solid 2px $text-secondery;
+        outline: none;
+    }
+}
+
+#enButton:focus {
+    color: $text-secondery;
+    border: solid 2px $text-secondery;
+}
+
+.button-div {
+    >span {
+        color: $text-primary;
+    }
+}
+
 .navbar {
     position: sticky;
     top: 0;
