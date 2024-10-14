@@ -3,7 +3,6 @@ import { RouterLink } from '@angular/router';
 import { DataServiceService } from '../../services/data-service.service';
 import { NgClass } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-header',
