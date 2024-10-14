@@ -1,5 +1,10 @@
 @import './../../styles.scss';
 
+*::-webkit-scrollbar-track {
+    background: $bc-primary;
+}
+
+
 .legal-notice {
     height: calc(100svh - 100px);
     background: #FFFCF3;
