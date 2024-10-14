@@ -270,7 +270,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
     .project {
 
         >div {
@@ -287,15 +286,35 @@
                     }
                 }
             }
+
+            >a {
+                img {
+                    filter: grayscale(0%);
+                }
+
+            }
+
+            .project-info-right,
+            .project-info-left {
+                top: 0px;
+                transition: top 250ms linear;
+            }
+
+            .project-info-left {
+                left: auto;
+            }
         }
     }
 
     .portfolio-outline {
+        outline: 4px solid $border-black;
+        cursor: pointer;
 
         >div {
 
             >svg {
-                width: 24px;
+                rotate: -135deg;
+                background: $bc-secondery;
             }
         }
     }
