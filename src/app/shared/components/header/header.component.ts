@@ -14,14 +14,16 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class HeaderComponent {
   data = inject(DataServiceService);
   private translationService = inject(TranslateService);
-  @ViewChild('enButton') enButton!: ElementRef; // Zugriff auf den EN-Button
+  @ViewChild('enButton') enButton!: ElementRef;
+  @ViewChild('deButton') deButton!: ElementRef;
   hmenuImg: string = this.data.navbarImg[0];
   menuIsToggled: boolean = false;
+  lang:string = 'en';
 
   toggleMenu() {
     if (!this.menuIsToggled) {
       this.renderImgForward();
-      this.focusLanguage();
+      this.focusLanguage(this.lang);
     } else {
       this.renderImgBackward();
     }
@@ -55,12 +57,18 @@ export class HeaderComponent {
   }
 
   changeLaguage(lang: string) {
-    this.translationService.use(lang);
+    this.translationService.use(lang)
+    this.lang = lang;
   }
 
-  focusLanguage() {
+  focusLanguage(lang: string) {
+    // Setze den Fokus auf den Button der aktiven Sprache
     setTimeout(() => {
-      this.enButton.nativeElement.focus();
-    }, 25);
+      if (lang === 'en') {
+        this.enButton.nativeElement.focus();
+      } else if (lang === 'de') {
+        this.deButton.nativeElement.focus();
+      }
+    }, 50); // Kleine Verzögerung, um sicherzustellen, dass das DOM bereit ist
   }
 }

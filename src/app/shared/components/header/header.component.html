@@ -9,7 +9,7 @@
         <div class="button-div">
             <button #enButton (click)="changeLaguage('en')"><p>EN</p></button>
             <span>---</span>
-            <button (click)="changeLaguage('de')"><p>DE</p></button>
+            <button #deButton (click)="changeLaguage('de')"><p>DE</p></button>
         </div>
         <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')">
             <h2 class="syne-700-45-96">{{'header.menu1' | translate}}</h2>
