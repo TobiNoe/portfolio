@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { DataServiceService } from '../../services/data-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -22,6 +23,7 @@ export class FooterComponent {
   imgLinkedinSrc: string = './assets/img/footer/linkedin_button.svg';
   mailTest = true;
   http = inject(HttpClient);
+  data = inject(DataServiceService);
 
   contactData = {
     name: "",
@@ -32,16 +34,6 @@ export class FooterComponent {
   checkPolicy() {
     this.policyChecked = !this.policyChecked;
     console.log(this.policyChecked);
-  }
-
- /*  onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted && this.policyChecked) {
-      console.log(this.contactData);
-    }
-  } */
-
-  scrollTop() {
-    window.scroll({top: 0})
   }
 
   post = {
@@ -69,7 +61,7 @@ export class FooterComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.policyChecked  && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.policyChecked && this.mailTest) {
 
       ngForm.resetForm();
       this.policyChecked = false;

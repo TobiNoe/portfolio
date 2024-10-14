@@ -101,5 +101,20 @@ export class DataServiceService {
     "./../../../../../assets/img/navbar/burger_5.png"
   ];
 
-  constructor() { }
+  scrollToFragment(fragment: string): void {
+    setTimeout(() => {
+      const element = document.querySelector(fragment);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 25);
+  }
+
+  scrollTop() {
+    setTimeout(() => {
+      window.scroll({ top: 0 })
+    }, 50);
+  }
+
+  constructor() { };
 }

@@ -11,13 +11,13 @@
             <span>---</span>
             <button #deButton (click)="changeLaguage('de')"><p>DE</p></button>
         </div>
-        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#aboutMe')">
+        <a routerLink="/home" (click)="toggleMenu(); data.scrollToFragment('#aboutMe')">
             <h2 class="syne-700-45-96">{{'header.menu1' | translate}}</h2>
         </a>
-        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#mySkills')">
+        <a routerLink="/home" (click)="toggleMenu(); data.scrollToFragment('#mySkills')">
             <h2 class="syne-700-45-96">{{'header.menu2' | translate}}</h2>
         </a>
-        <a routerLink="/home" (click)="toggleMenu(); scrollToFragment('#portfolio')">
+        <a routerLink="/home" (click)="toggleMenu(); data.scrollToFragment('#portfolio')">
             <h2 class="syne-700-45-96">{{'header.menu3' | translate}}</h2>
         </a>
         <div class="placeholder-navbar"></div>

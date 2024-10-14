@@ -18,7 +18,7 @@ export class HeaderComponent {
   @ViewChild('deButton') deButton!: ElementRef;
   hmenuImg: string = this.data.navbarImg[0];
   menuIsToggled: boolean = false;
-  lang:string = 'en';
+  lang: string = 'en';
 
   toggleMenu() {
     if (!this.menuIsToggled) {
@@ -39,21 +39,13 @@ export class HeaderComponent {
     }
   }
 
-  renderImgBackward(){
+  renderImgBackward() {
     for (let index = 4; index >= 0; index--) {
       const img = this.data.navbarImg[index];
       setTimeout(() => {
         this.hmenuImg = img;
       }, (4 - index) * 100);
     }
-  }
-
-  scrollToFragment(fragment: string): void {
-    const element = document.querySelector(fragment);
-    console.log('element :>> ', element);  
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
   }
 
   changeLaguage(lang: string) {

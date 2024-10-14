@@ -1,6 +1,6 @@
 @import './../../styles.scss';
 
-.legal-notice {
+.imprint {
     height: calc(100svh - 100px);
     background: #FFFCF3;
     overflow-y: scroll;
@@ -19,13 +19,13 @@
 }
 
 @media only screen and (max-width: 960px) {
-    .legal-notice {
+    .imprint {
         padding: 25px 50px;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .legal-notice {
+    .imprint {
         padding: 25px 25px;
     }
 }

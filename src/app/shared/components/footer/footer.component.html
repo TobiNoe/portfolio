@@ -85,7 +85,7 @@
                     </label>
                 </div>
 
-                <p>{{'footer.formPrivacyPolicy1' | translate}}<a (click)="scrollTop()" routerLink="/legal">{{'footer.formPrivacyPolicy2' | translate}}</a>{{'footer.formPrivacyPolicy3' | translate}}</p>
+                <p>{{'footer.formPrivacyPolicy1' | translate}}<a (click)="data.scrollToFragment('#legal'); data.scrollTop()" routerLink="/legal">{{'footer.formPrivacyPolicy2' | translate}}</a>{{'footer.formPrivacyPolicy3' | translate}}</p>
             </div>
             <span class="validation-text validation-policy" [ngClass]="policyChecked ? 'd-none' : '' ">{{'footer.formPrivacyPolicyValid' | translate}}</span>
 
@@ -99,7 +99,7 @@
         </form>
     </div>
     <div class="top-navigation">
-        <img (click)="scrollTop()" src="./assets/img/footer/top_navigation.png" alt="">
+        <img (click)="data.scrollTop()" src="./assets/img/footer/top_navigation.png" alt="">
     </div>
     <div class="info">
         <p> © Tobias Nölle 2024</p>
@@ -120,7 +120,7 @@
         </div>
     </div>
     <div class="legal-notice">
-        <a (click)="scrollTop()" routerLink="/legal">
+        <a (click)="data.scrollToFragment('#imprint'); data.scrollTop()" routerLink="/imprint">
             <p>{{'footer.formLegalNotice' | translate}}</p>
         </a>
     </div>
