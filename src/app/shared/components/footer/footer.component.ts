@@ -33,7 +33,6 @@ export class FooterComponent {
 
   checkPolicy() {
     this.policyChecked = !this.policyChecked;
-    console.log(this.policyChecked);
   }
 
   post = {

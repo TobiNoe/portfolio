@@ -28,6 +28,5 @@ export class LandingPageComponent {
 
   togglePageView(toggled: boolean) {
     this.pageViewToggled = !this.pageViewToggled;
-    console.log('pageViewToggled :>> ', this.pageViewToggled);
   }
-  }
+}

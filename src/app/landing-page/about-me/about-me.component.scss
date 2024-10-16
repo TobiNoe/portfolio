@@ -24,6 +24,7 @@
     width: 50%;
     @include dFlex($direction: column);
     gap: 48px;
+    padding-right: 32px;
 
     >div {
         @include dFlex($jc: center, $direction: column);
