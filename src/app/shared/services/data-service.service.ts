@@ -68,7 +68,7 @@ export class DataServiceService {
 
   myProjects = [
     {
-      img: "./../../../../../assets/img/portfolio/project.png",
+      img: "./../../../../../assets/img/portfolio/pokedex.png",
       link: "https://pokedex.tobias-noelle.de/",
       gitHubLink: "https://github.com/TobiNoe/pokedex",
       projectName: "Pokedex ",
@@ -76,7 +76,7 @@ export class DataServiceService {
       description: "" /* to input into de.json ans en.json */
     },
     {
-      img: "./../../../../../assets/img/portfolio/project.png",
+      img: "./../../../../../assets/img/portfolio/elPolloLoco.png",
       link: "https://elpolloloco.tobias-noelle.de/",
       gitHubLink: "https://github.com/TobiNoe/PolloLoco",
       projectName: "El Pollo Loco",
@@ -84,7 +84,7 @@ export class DataServiceService {
       description: "" /* to input into de.json ans en.json */
     },
     {
-      img: "./../../../../../assets/img/portfolio/project.png",
+      img: "./../../../../../assets/img/portfolio/join.png",
       link: "https://join.tobias-noelle.de/",
       gitHubLink: "https://github.com/TobiNoe/Join-Portfolio",
       projectName: "Join",
