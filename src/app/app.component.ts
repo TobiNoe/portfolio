@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +9,7 @@ import { NgClass } from '@angular/common';
   imports: [
     HeaderComponent,
     RouterOutlet,
-    FooterComponent,
-    NgClass
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -34,29 +32,25 @@ export class AppComponent {
   checkDeviceType() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     this.deviceType = isMobile ? 'mobile' : 'desktop';
-    console.log('Device :>> ', this.deviceType);
   }
 
   checkOrientation() {
     setTimeout(() => {
       if (window.matchMedia("(orientation: portrait)").matches) {
         this.orientation = 'portrait';
-        this.checkVisibilite();
+        this.setVisibilite();
       } else {
         this.orientation = 'landscape';
-        this.checkVisibilite();
+        this.setVisibilite();
       }
-      console.log('format :> ', this.orientation); 
     }, 25);
   }
 
-  checkVisibilite() {
+  setVisibilite() {
     if (this.orientation == 'landscape' && this.deviceType == 'mobile') {
       this.show = false;
-      console.log('show false :>> ', this.show);
     } else {
       this.show = true;
-      console.log('show true :>> ', this.show);
     }
   }
 
