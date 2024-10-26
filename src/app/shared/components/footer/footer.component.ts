@@ -51,7 +51,6 @@ export class FooterComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
             this.policyChecked = false;
           },
@@ -60,11 +59,6 @@ export class FooterComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } /* else if (ngForm.submitted && ngForm.form.valid && this.policyChecked && this.mailTest) {
-
-      ngForm.resetForm();
-      this.policyChecked = false;
-    } */
+    } 
   }
-
 }
