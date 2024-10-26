@@ -47,7 +47,7 @@ export class FooterComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && this.policyChecked && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && this.policyChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -60,11 +60,11 @@ export class FooterComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.policyChecked && this.mailTest) {
+    } /* else if (ngForm.submitted && ngForm.form.valid && this.policyChecked && this.mailTest) {
 
       ngForm.resetForm();
       this.policyChecked = false;
-    }
+    } */
   }
 
 }
