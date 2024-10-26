@@ -32,7 +32,6 @@
 
     h2 {
         padding-bottom: 40px;
-        /* width: 426px; */
 
         &:hover {
             color: $text-secondery;
@@ -79,8 +78,6 @@ form {
             margin-bottom: 10px;
             height: 50px;
             width: 100%;
-
-            /*  padding: 15px 25px 15px 25px; */
 
             &:hover {
                 border: 4px solid $text-primary;
@@ -132,7 +129,6 @@ form {
         >textarea {
             height: 202px;
             width: 100%;
-            /* padding: 15px 25px 15px 25px; */
 
             &:hover {
                 border: 4px solid $text-primary;
@@ -311,7 +307,6 @@ form {
         text-decoration: none;
         color: $text-primary;
         cursor: pointer;
-        /* min-width: 94px; */
 
         >p {
             position: relative;
