@@ -262,6 +262,12 @@ form {
             cursor: pointer;
         }
     }
+
+    .btn-sendMail {
+        color: $text-secondery;
+        border: 4px solid $text-secondery;
+    }
+
 }
 
 .top-navigation {

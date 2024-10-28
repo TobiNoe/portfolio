@@ -64,6 +64,7 @@
         "formPrivacyPolicy3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         "formPrivacyPolicyValid": "Bitte akzeptieren Sie die Datenschutzerklärung.",
         "formButton": "Nachricht senden",
+        "formButtonMailSend": "Nachricht gesendet!",
         "formLegalNotice": "Impressum"
     },
     "legalNotice": {

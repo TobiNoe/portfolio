@@ -1,6 +1,7 @@
 <div class="placeholder"></div>
 <section class="footer" id="footer">
-    <h2 [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'flex'}">{{'footer.headline' | translate}}</h2>
+    <h2 [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'flex'}">{{'footer.headline' | translate}}
+    </h2>
     <div class="form-div" [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'flex'}">
         <h4>{{'footer.formHeadline' | translate}}</h4>
         <p>{{'footer.formSlogan' | translate}}</p>
@@ -85,13 +86,19 @@
                     </label>
                 </div>
 
-                <p>{{'footer.formPrivacyPolicy1' | translate}}<a (click)="data.scrollTop(); data.toggleFormView(false)" routerLink="/legal">{{'footer.formPrivacyPolicy2' | translate}}</a>{{'footer.formPrivacyPolicy3' | translate}}</p>
+                <p>{{'footer.formPrivacyPolicy1' | translate}}<a (click)="data.scrollTop(); data.toggleFormView(false)"
+                        routerLink="/legal">{{'footer.formPrivacyPolicy2' | translate}}</a>{{'footer.formPrivacyPolicy3'
+                    | translate}}</p>
             </div>
-            <span class="validation-text validation-policy" [ngClass]="policyChecked ? 'd-none' : '' ">{{'footer.formPrivacyPolicyValid' | translate}}</span>
+            <span class="validation-text validation-policy"
+                [ngClass]="policyChecked ? 'd-none' : '' ">{{'footer.formPrivacyPolicyValid' | translate}}</span>
 
             <div class="btn-center">
-                @if (contactForm.valid && policyChecked) {
+                @if (contactForm.valid && policyChecked &&!mailSend) {
                 <input class="btn-submit btn" type="submit" value="{{'footer.formButton' | translate}}">
+                }
+                @else if (contactForm.valid && policyChecked && mailSend) {
+                <input class="btn-sendMail btn" type="submit" value="{{'footer.formButtonMailSend' | translate}}">
                 } @else {
                 <input class="btn-no-submit btn" type="submit" value="{{'footer.formButton' | translate}}">
                 }
@@ -113,7 +120,8 @@
                     (mouseout)="imgMailSrc = './assets/img/footer/email_button.svg'" alt="Github link"
                     alt="Mail link"></a>
             <a href="https://de.linkedin.com/in/tobias-nölle-17223728a" target="_blank">
-                <img [src]="imgLinkedinSrc" (mouseover)="imgLinkedinSrc = './assets/img/footer/linkedin_button_hover.svg'"
+                <img [src]="imgLinkedinSrc"
+                    (mouseover)="imgLinkedinSrc = './assets/img/footer/linkedin_button_hover.svg'"
                     (mouseout)="imgLinkedinSrc = './assets/img/footer/linkedin_button.svg'" alt="Github link"
                     alt="Linkedin link">
             </a>

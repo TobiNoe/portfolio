@@ -16,6 +16,7 @@ import { DataServiceService } from '../../services/data-service.service';
 export class FooterComponent {
   btnDisabled: boolean = true;
   policyChecked: boolean = false;
+  mailSend: boolean = false;
   isEmptyName: boolean = true;
   isEmptyMail: boolean = true;
   imgGitSrc: string = './assets/img/footer/github_button.svg';
@@ -50,15 +51,18 @@ export class FooterComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            ngForm.resetForm();
-            this.policyChecked = false;
+            setTimeout(() => {
+              ngForm.resetForm();
+              this.policyChecked = false;
+              this.mailSend = false;
+            }, 2000);
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.mailSend = true,
         });
-    } 
+    }
   }
 
 }
