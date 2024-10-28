@@ -1,7 +1,7 @@
 <div class="placeholder"></div>
 <section class="footer" id="footer">
-    <h2>{{'footer.headline' | translate}}</h2>
-    <div class="form-div">
+    <h2 [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'flex'}">{{'footer.headline' | translate}}</h2>
+    <div class="form-div" [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'flex'}">
         <h4>{{'footer.formHeadline' | translate}}</h4>
         <p>{{'footer.formSlogan' | translate}}</p>
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -98,7 +98,7 @@
             </div>
         </form>
     </div>
-    <div class="top-navigation">
+    <div class="top-navigation" [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'block'}">
         <img (click)="data.scrollTop()" src="./assets/img/footer/top_navigation.png" alt="">
     </div>
     <div class="info">
@@ -120,7 +120,7 @@
         </div>
     </div>
     <div class="legal-notice">
-        <a (click)="data.scrollToFragment('#imprint'); data.scrollTop()" routerLink="/imprint">
+        <a (click)="data.scrollToFragment('#imprint'); data.scrollTop(); data.toggleFormView(false)" routerLink="/imprint">
             <p>{{'footer.formLegalNotice' | translate}}</p>
         </a>
     </div>

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { DataServiceService } from '../shared/services/data-service.service';
 
 @Component({
   selector: 'app-imprint',
@@ -10,5 +11,5 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-
+  data = inject(DataServiceService);
 }

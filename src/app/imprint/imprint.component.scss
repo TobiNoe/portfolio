@@ -5,7 +5,7 @@
 }
 
 .imprint {
-    height: calc(100svh - 100px - 235px);
+    height: calc(100svh - 100px - 182px - 102px - 26px);
     background: #FFFCF3;
     overflow-y: scroll;
     hyphens: auto;
@@ -32,5 +32,6 @@
     .imprint {
         @include dFlex($direction: column, $jc: center);
         padding: 25px 25px;
+        height: calc(100svh - 100px - 182px - 123px - 26px);
     }
 }

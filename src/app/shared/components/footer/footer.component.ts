@@ -21,7 +21,6 @@ export class FooterComponent {
   imgGitSrc: string = './assets/img/footer/github_button.svg';
   imgMailSrc: string = './assets/img/footer/email_button.svg';
   imgLinkedinSrc: string = './assets/img/footer/linkedin_button.svg';
-  mailTest = true;
   http = inject(HttpClient);
   data = inject(DataServiceService);
 
@@ -61,4 +60,5 @@ export class FooterComponent {
         });
     } 
   }
+
 }
