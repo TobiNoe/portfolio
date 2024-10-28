@@ -1,7 +1,7 @@
 <div class="navbar" [ngClass]="menuIsToggled ? 'menu-show-height' : ''">
     <div class="nav-headline">
         <div class="navbar-logo"><h4 ngNonBindable>{{TN}}</h4></div>
-        <div (click)="toggleMenu()" class="navbar-hmenu">
+        <div (click)="toggleMenu()" class="navbar-hmenu" [ngStyle]="data.formShow == false ? {'display': 'none'} : {'display': 'flex'}">
             <img [src]="hmenuImg" alt="hamburger-menu">
         </div>
     </div>

@@ -1,13 +1,13 @@
 import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DataServiceService } from '../../services/data-service.service';
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgClass, TranslateModule],
+  imports: [RouterLink, NgClass, TranslateModule, NgStyle],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
