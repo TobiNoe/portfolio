@@ -127,6 +127,20 @@
         padding: 0 25px;
     }
 
+    .about-me-button {
+        align-items: center !important;
+        padding: 0 0 5px;
+    
+        >a {
+            font: 400 18px 'Overpass';
+            padding: 20px 30px;
+    
+            &:hover {
+                padding: 20px 50px;
+            }
+        }
+    }
+
     .about-me-img {
 
         .about-me-outline {
