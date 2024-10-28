@@ -6,7 +6,8 @@
 
 
 .legal-notice {
-    height: calc(100svh - 100px);
+    scroll-margin-top: 25px;
+    height: calc(100svh - 100px - 182px - 102px - 26px);
     background: #FFFCF3;
     overflow-y: scroll;
     hyphens: auto;
@@ -31,6 +32,7 @@
 
 @media only screen and (max-width: 768px) {
     .legal-notice {
+        height: calc(100svh - 100px - 182px - 123px - 26px);
         padding: 25px 25px;
     }
 }

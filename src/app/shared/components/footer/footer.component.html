@@ -85,7 +85,7 @@
                     </label>
                 </div>
 
-                <p>{{'footer.formPrivacyPolicy1' | translate}}<a (click)="data.scrollToFragment('#legal'); data.scrollTop()" routerLink="/legal">{{'footer.formPrivacyPolicy2' | translate}}</a>{{'footer.formPrivacyPolicy3' | translate}}</p>
+                <p>{{'footer.formPrivacyPolicy1' | translate}}<a (click)="data.scrollTop(); data.toggleFormView(false)" routerLink="/legal">{{'footer.formPrivacyPolicy2' | translate}}</a>{{'footer.formPrivacyPolicy3' | translate}}</p>
             </div>
             <span class="validation-text validation-policy" [ngClass]="policyChecked ? 'd-none' : '' ">{{'footer.formPrivacyPolicyValid' | translate}}</span>
 

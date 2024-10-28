@@ -1,5 +1,7 @@
 <section class="legal-notice">
-    <a routerLink="/home"><p>{{'legalNotice.back' | translate}}</p></a>
+    <a (click)="data.toggleFormView(true)" routerLink="/home">
+        <p>{{'legalNotice.back' | translate}}</p>
+    </a>
     <br />
     <br />
     <h3 #legal id="legal">{{'legalNotice.privacyPolicy' | translate}}</h3>
@@ -20,12 +22,13 @@
     <h3>{{'legalNotice.hosting' | translate}}</h3>
     <p>{{'legalNotice.hostingProvider' | translate}}</p>
     <h3>{{'legalNotice.allInkl' | translate}}</h3>
-    <p>{{'legalNotice.allInklText' | translate}}<a
-            href="https://all-inkl.com/datenschutzinformationen/" target="_blank"
+    <p>{{'legalNotice.allInklText' | translate}}<a href="https://all-inkl.com/datenschutzinformationen/" target="_blank"
             rel="noopener noreferrer">https://all-inkl.com/datenschutzinformationen/</a>.</p>
     <p>{{'legalNotice.useOfAllInkl' | translate}}</p>
     <br />
     <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
     <br />
-    <a routerLink="/home"><p>{{'legalNotice.back' | translate}}</p></a>
+    <a (click)="data.toggleFormView(true)" routerLink="/home">
+        <p>{{'legalNotice.back' | translate}}</p>
+    </a>
 </section>

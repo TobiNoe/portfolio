@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataServiceService {
-  formShow:boolean = true;
+  formShow: boolean = true;
 
   mySkills = [
     {
