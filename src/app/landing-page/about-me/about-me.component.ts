@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { DataServiceService } from '../../shared/services/data-service.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
+  data = inject(DataServiceService);
   isHover: boolean = false;
 
   toggleHover() {
