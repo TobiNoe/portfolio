@@ -237,7 +237,7 @@
     }
 
     .project-info {
-        height: 300px;
+        height: 320px;
         @include dFlex($direction: column, $jc: start, $ai: start);
 
 
@@ -329,5 +329,17 @@
     .portfolio-outline-left {
         margin: 0px 0px 0 0;
         right: 0;
+    }
+
+    .project-button {
+
+        >a {
+            padding: 15px 30px;
+
+            &:hover {
+                padding: 15px 50px;
+            }
+        }
+
     }
 }
