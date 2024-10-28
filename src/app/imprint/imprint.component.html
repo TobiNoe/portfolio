@@ -1,5 +1,5 @@
 <section class="imprint">
-    <a (click)="data.toggleFormView(true)" routerLink="/home">
+    <a (click)="data.toggleFormView(true); data.scrollToBottom()" routerLink="/home">
         <p>{{'legalNotice.back' | translate}}</p>
     </a>
     <br />
@@ -18,7 +18,7 @@
 
     <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
     <br />
-    <a (click)="data.toggleFormView(true)" routerLink="/home">
+    <a (click)="data.toggleFormView(true); data.scrollToBottom()" routerLink="/home">
         <p>{{'legalNotice.back' | translate}}</p>
     </a>
 </section>

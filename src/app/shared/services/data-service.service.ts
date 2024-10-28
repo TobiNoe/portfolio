@@ -117,6 +117,15 @@ export class DataServiceService {
     }, 50);
   }
 
+  scrollToBottom() {
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "auto"
+      });
+    }, 50);
+  }
+
   toggleFormView(status: boolean) {
     this.formShow = status;
   }
