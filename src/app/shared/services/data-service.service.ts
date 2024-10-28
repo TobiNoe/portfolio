@@ -113,7 +113,10 @@ export class DataServiceService {
 
   scrollTop() {
     setTimeout(() => {
-      window.scroll({ top: 0 })
+      window.scroll({
+        top: 0,
+        behavior: "smooth"
+      })
     }, 50);
   }
 
