@@ -237,9 +237,8 @@
     }
 
     .project-info {
-        height: 340px;
+        height: 300px;
         @include dFlex($direction: column, $jc: start, $ai: start);
-
 
         >div {
             max-width: 100%;
@@ -267,7 +266,6 @@
             font-size: clamp(32px, 3vw, 45px);
         }
     }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -292,7 +290,6 @@
                 img {
                     filter: grayscale(0%);
                 }
-
             }
 
             .project-info-right,
@@ -331,6 +328,10 @@
         right: 0;
     }
 
+    .project-info {
+        height: 340px;
+    }
+
     .project-button {
 
         >a {
@@ -340,6 +341,5 @@
                 padding: 15px 50px;
             }
         }
-
     }
 }
